@@ -1,0 +1,12 @@
+.card{
+    width: 470px;
+    font-family: 'Playfair Display', serif;
+    display: inline-block;
+    margin: 4px;
+    color: #030530;
+    text-align: left;
+}
+.card_block{
+    width: 960px;
+    text-align: center;
+}
