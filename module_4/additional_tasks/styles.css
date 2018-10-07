@@ -1,0 +1,50 @@
+.points {
+    float: left;
+    padding: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+.points:hover {
+    color: darkgreen;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+
+.counter {
+    color: #0E1116;
+}
+
+.counter:nth-child(3n+1) {
+    background-color: #88292F;
+}
+
+.counter:nth-child(3n+2) {
+    background-color: #5DB7DE;
+}
+
+.counter:nth-child(3n+3) {
+    background-color: #0D5D56;
+}
+
+.arrow::before {
+    content: '\2192';
+}
+
+.count {
+    counter-increment: count-block;
+}
+
+.count::before {
+    display: inline-block;
+    content: counter(count-block, upper-roman);
+    margin-right: 10px;
+    margin-bottom: 5px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    padding: 2px;
+    border: 1px solid navy;
+}
