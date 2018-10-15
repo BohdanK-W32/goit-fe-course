@@ -1,0 +1,86 @@
+body {
+    background: url(https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-wallpaper-new-PIC-WPC00923.jpg);
+    width: 100%;
+    background-size: cover;
+}
+
+.big_block {
+    width: 400px;
+    height: 400px;
+    background-color: #424242;
+    position: relative;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+}
+
+.tl {
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tc {
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.tr {
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.cl {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.cc {
+    background-color: green;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cr {
+    background-color: orange;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.bl {
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.bc {
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.br {
+    background-color: darkblue;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
