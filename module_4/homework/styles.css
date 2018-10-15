@@ -1,58 +1,222 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header{
-    width: 1170px;
-}
-ul {
-    display: block;
-    list-style: none;
-    float: right;
-    margin-top: 36px;
-    height: 23px;
+body {
+    margin-left: 30px;
 }
 
-ul li {
-    font-family: 'Open Sans', sans-serif;
+header {
+    margin-bottom: 112px;
+}
+
+header .logo,
+header nav {
+    width: 45%;
+    display: inline-block;
+}
+
+header nav {
+    text-align: right;
+}
+
+header nav li {
+    display: inline-block;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 14px;
-    padding: 0 15px;
-    text-transform: uppercase;
-    display: inline;
-    vertical-align: middle;
-
 }
 
-
-a.logo {
-    text-decoration: none;
+header nav li a:hover {
+    color: #1abc9c;
 }
 
-a {
+header nav li a {
     text-decoration: none;
     color: #0f0101;
 }
 
-a.nav:hover {
-    color: #1abc9c;
-}
-
-li.logo {
-    display: inline;
-    font-family: 'Roboto', sans-serif;
-    float: left;
+.logo a {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
     font-weight: 300;
-    font-size: 30px;
     text-transform: uppercase;
+    font-size: 30px;
     color: #555252;
-    vertical-align: middle;
 }
 
-li.logo::first-letter {
-    text-transform: uppercase;
+.logo::first-letter {
     font-weight: 900;
-    font-size: 30px;
     color: #1abc9c;
+}
+
+.headline,
+.headline2 {
+    margin-bottom: 92px;
+}
+
+.headline2 {
+    margin-top: 105px;
+}
+
+.headline h1,
+.headline2 h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #515151;
+    text-align: center;
+    position: relative;
+}
+
+
+.headline h1::after {
+    content: "";
+    background-color: #1abc9c;
+    width: 164px;
+    height: 7px;
+    position: absolute;
+    margin-top: 85px;
+    margin-left: -330px;
+}
+
+.headline2 h1::after {
+    content: "";
+    background-color: #1abc9c;
+    width: 164px;
+    height: 7px;
+    position: absolute;
+    margin-top: 85px;
+    margin-left: -240px;
+}
+
+.card {
+    max-width: 255px;
+    width: 100%;
+    height: 325px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.wrapper .card:nth-child(4n+1) {
+    margin-left: 0;
+}
+
+.wrapper .card:nth-child(4n+4) {
+    margin-right: 0;
+}
+
+.card:hover .description .name {
+    background: #1abc9c;
+    transition: all 0.2s ease-in;
+}
+
+.card:hover .description .price {
+    background: #7fd9c7;
+    transition: all 0.2s ease-in;
+}
+
+.card .photo {
+    height: 285px;
+    width: 100%;
+    background: #e9f0fd;
+    position: relative;
+}
+
+.card .photo img {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+
+}
+
+.description .name,
+.description .price {
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: 0.2s ease-in;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    /*   overflow: auto; */
+}
+
+.description .price {
+    width: 55px;
+    height: 36.5px;
+    /*   white-space: nowrap; */
+    text-align: center;
+    background: #8c8c8c;
+    color: #fff;
+    float: right;
+}
+
+.description .name {
+    width: 200px;
+    /*   white-space: nowrap; */
+    background: #323232;
+    color: #fff;
+    float: left;
+}
+
+.post_wrapper {}
+
+.post {
+    margin: 0 15px;
+    max-width: 350px;
+    height: 260px;
+    width: 100%;
+    display: inline-block;
+}
+
+.post_headline {
+    margin-top: 14px;
+    margin-bottom: 43px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(85, 82, 82, 255);
+    position: relative;
+}
+
+.post_headline::after {
+    content: "";
+    background-color: #1abc9c;
+    width: 163px;
+    height: 3px;
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -238px;
+}
+
+.post_text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(85, 82, 82, 255);
+    margin-bottom: 15px;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    width: 160px;
+    height: 50px;
+    background-color: #4ec6ab;
+    color: #f6fbfa;
+    border: none;
+    border-radius: 4px;
 }
