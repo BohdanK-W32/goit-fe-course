@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+header {
+  display: block;
+}
+
+header .logo, header nav {
+/*   width: 50%; */
+  width: 45%;
+  display: inline-block;
+}
+
+header nav {
+  text-align: right;
+}
+
+header .logo h2 {
+  text-transform: uppercase;
+}
+
+header .logo h2:first-letter {
+  color: rgba(26, 188, 156, 255);
+}
+
+header nav li {
+  display: inline-block;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s ease-in;
+}
+
+header nav li:hover {
+  color: rgba(26, 188, 156, 255);
+}
+
+.headline {
+  width: 100%;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.headline h1 {
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+}
+
+.headline h1:after {
+  content: "";
+  display: block;
+  width: 165px;
+  height: 7px;
+  background: rgba(26, 188, 156, 255);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
