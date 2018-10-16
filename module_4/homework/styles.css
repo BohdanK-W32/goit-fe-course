@@ -10,6 +10,7 @@ body {
 }
 
 header {
+    margin-top: 30px;
     margin-bottom: 112px;
     max-width: 1135px;
 }
@@ -22,7 +23,7 @@ header nav {
 
 header nav {
     text-align: right;
-
+    vertical-align: top;
 }
 
 header nav li {
