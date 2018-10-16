@@ -6,6 +6,7 @@
 
 body {
     margin-left: 30px;
+    max-width: 1200px;
 }
 
 header {
@@ -137,7 +138,7 @@ header nav li a {
     width: 100%;
     transform: translate(-50%, -50%);
     padding: 30px;
-
+    object-fit: contain;
 }
 
 .description .name,
@@ -219,4 +220,10 @@ button {
     color: #f6fbfa;
     border: none;
     border-radius: 4px;
+}
+
+.img_post {
+    width: 350px;
+    height: 260px;
+    object-fit: cover;
 }
