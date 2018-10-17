@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Pe-icon-7-stroke';
+    src: url('fonts/Pe-icon-7-stroke.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +17,8 @@ body {
 }
 
 header {
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 30px;
     margin-bottom: 112px;
     max-width: 1120px;
@@ -56,4 +65,39 @@ header nav li a {
 .logo::first-letter {
     font-weight: 900;
     color: #1abc9c;
+}
+
+.slider {
+    max-width: 1600px;
+    width: 100%;
+    max-height: 600px;
+    object-fit: fill;
+}
+
+.slider .slide {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.slide-headline, .slide-subline{
+    text-transform: uppercase;
+}
+.slide-text .slide-headline{
+    text-transform: uppercase;
+}
+
+.ctrl{
+    font-family: 'Pe-icon-7-stroke';
+    font-size: 100pt;
+    width: 104px;
+    height: 104px;
+    border: none;
+    background-color: rgba(81, 81, 81, 0.65);
+    text-align: center;
+}
+.ctrl-prev{
+
+}
+.ctrl-next{
+
 }
