@@ -185,6 +185,62 @@ header nav li a {
     margin: 15px;
 }
 
+.card-overlay {
+    display: none;
+    width: 100%;
+    height: 283px;
+    border-width: 10px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    background-color: rgba(0, 0, 0, .549);
+}
+
+.card:hover .card-overlay {
+    display: block;
+}
+
+.buttons {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.o-button {
+    margin: 3px;
+    font-family: 'Pe-icon-7-stroke';
+    font-size: 30px;
+    color: #ffffff;
+    background: transparent;
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+}
+
+.o-button:hover{
+    border: none;
+    background-color: #1abc9c;
+}
+
+.cart {
+    font-family: 'Pe-icon-7-stroke';
+    width: 164px;
+    height: 48px;
+    background-color: rgb(50, 50, 50);
+}
+
+.cart-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase; 
+    text-align: center;
+    vertical-align: middle;
+}
+
 .card:hover .description .name {
     background: #1abc9c;
     transition: all 0.2s ease-in;
@@ -196,8 +252,8 @@ header nav li a {
 }
 
 .card .photo {
-    height: 285px;
-    width: 100%;
+    height: 283px;
+    width: 255px;
     position: relative;
 }
 
