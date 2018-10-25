@@ -9,9 +9,16 @@ font-family: 'Kaushan Script', cursive; */
     padding: 0;
 }
 
+header nav li{
+    display: inline-block;
+}
+
+nav{
+    display: inline-block;
+}
+
 ul{
     list-style: none;
-    display: inline-block;
 }
 
 .menu-item{
@@ -21,6 +28,11 @@ ul{
     color: #95e1d3;
     text-transform: uppercase;
     text-decoration: none;
+    display: inline-block;
+    padding: 0 29px;
+}
+
+.logo-block{
     display: inline-block;
 }
 
