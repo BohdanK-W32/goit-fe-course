@@ -8,18 +8,20 @@
     margin: 20px;
     width: 800px;
     height: 800px;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-content: space-between;
 }
 
 .block {
-    width: 240px;
-    height: 240px;
+    width: 30%;
+    height: 30%;
 }
 
 img {
-    width: 239px;
-    height: 239px;
+    width: 240px;
+    height: 240px;
     object-fit: cover;
 }
 
