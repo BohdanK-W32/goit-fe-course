@@ -47,12 +47,13 @@ li:nth-last-child(1)>.menu-item {
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
-    padding: 0 29px;
+    margin: 0 25px;
+    transition: color 200ms linear, border 200ms linear;
 }
 
 .menu-item:hover {
     color: #f38181;
-
+    border-bottom: 3px solid #f38181; 
 }
 
 .logo-block {
