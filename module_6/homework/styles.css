@@ -53,7 +53,7 @@ li:nth-last-child(1)>.menu-item {
 
 .menu-item:hover {
     color: #f38181;
-    border-bottom: 3px solid #f38181; 
+    border-bottom: 3px solid #f38181;
 }
 
 .logo-block {
@@ -173,8 +173,7 @@ li:nth-last-child(1)>.menu-item {
     font-size: 15px;
     color: #999999;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 90px;
+    margin: 90px auto;
     max-width: 945px;
 }
 
@@ -191,36 +190,13 @@ li:nth-last-child(1)>.menu-item {
     text-align: center;
 }
 
-.image{
-    width: 380px;
-    height: 470px;
-    object-fit: cover;
-    padding-bottom: 30px;
-}
-
-.name{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    text-transform: uppercase;
-    padding-bottom: 15px;
-}
-
-.position{
-    font-family: 'Roboto', sans-serif;
-    font-style: italic;
-    font-size: 15px;
-    font-weight: 300;
-    color: rgb(153, 153, 153);
-}
-
-footer{
+footer {
     border-top: 1px solid #e5e5e5;
     height: 62px;
     position: relative;
 }
 
-.footer-text{
+.footer-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -231,18 +207,18 @@ footer{
     transform: translateY(-50%);
 }
 
-.footer-last-word{
+.footer-last-word {
     color: #f38181;
 }
 
-#email-form{
+#email-form {
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);    
+    transform: translateY(-50%);
 }
 
-#email{
+#email {
     width: 230px;
     height: 40px;
     font-style: italic;
@@ -253,7 +229,7 @@ footer{
     margin-right: -5px;
 }
 
-#email-button{
+#email-button {
     height: 40px;
     width: 150px;
     background-color: #95e1d3;
