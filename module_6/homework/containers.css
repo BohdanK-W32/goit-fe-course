@@ -1,0 +1,67 @@
+.team{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.person_container{
+    text-align: center;
+    height: 550px;
+    width: 380px;
+}
+
+.person {
+    width: 380px;
+    height: 470px;
+    background-color: #95e1d3;
+    position: relative;
+}
+
+img {
+    width: 380px;
+    height: 470px;
+    object-fit: cover;
+    transition: all 0.2s ease-in;
+}
+
+.person_overlay{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 380px;
+    height: 470px;
+    z-index: 100;
+    background: linear-gradient( 90deg, rgba(252,227,138, 0.9) 0%, rgba(243,129,129, 0.9) 100%);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.2s ease-in;
+}
+
+.person:hover .person_overlay{
+    opacity: 1;
+    transform: translate(-10px, -10px);
+}
+
+.person:hover img{
+    transform: translate(-10px, -10px);
+
+}
+
+.button_wrapper{
+    width: 225px;
+    height: 56px;
+} 
+
+.button{
+    text-decoration: none;
+    width: 56px;
+    height: 56px;
+}
+
+.social{
+    height: 26px;
+    width: 26px;
+    object-fit: contain;
+}

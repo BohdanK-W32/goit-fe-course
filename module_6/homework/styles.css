@@ -177,17 +177,20 @@ li:nth-last-child(1)>.menu-item {
     max-width: 945px;
 }
 
-.team {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+.name{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+    text-transform: uppercase;
 }
 
-.person {
-    display: inline-block;
-    width: 380px;
-    height: 540px;
-    text-align: center;
+.position{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 15px;
+    color: #999999;
 }
 
 footer {
