@@ -1,3 +1,15 @@
+/* roboto-slab-regular - latin */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'),
+        url('fonts/roboto-slab-v7-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/roboto-slab-v7-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 /* roboto-slab-700 - latin */
 @font-face {
     font-family: 'Roboto Slab';
@@ -76,12 +88,24 @@
     box-sizing: border-box;
 }
 
+body {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 940px;
+    width: 100%;
+}
+
 header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-top: 45px;
+    margin-bottom: 130px;
 }
 
 nav .menu {
@@ -98,9 +122,25 @@ nav .menu {
     color: #fed136;
 }
 
-body {
-    max-width: 1400px;
-    margin: 0 auto;
+.headline {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #222222;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subline {
+    font-family: 'Noto Serif', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    color: #777777;
+    text-align: center;
+    margin-bottom: 80px;
 }
 
 .menu {
@@ -109,7 +149,6 @@ body {
 
 .menu-item-li {
     margin: 0 15px;
-    padding: 4px;
 }
 
 .menu-item {
@@ -119,4 +158,47 @@ body {
     font-size: 14px;
     text-transform: uppercase;
     color: #222222;
+    padding: 2px 4px;
+}
+
+.menu-item:hover {
+    color: #fed136;
+}
+
+.service-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.service {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 290px;
+}
+
+.service-headline {
+    font-family: 'Montserrat', sans-serif;
+    color: #222222;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+}
+
+.service-text {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777;
+    text-align: center;
+}
+
+.service-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border: #fed136 solid 3px;
+    border-radius: 45px;
+    padding: 14px;
 }
