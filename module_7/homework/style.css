@@ -158,13 +158,14 @@ nav .menu {
     text-transform: uppercase;
     color: #222222;
     padding: 2px 4px;
+    transition: color 200ms ease-in;
 }
 
 .menu-item:hover {
     color: #fed136;
 }
 
-.services{
+.services {
     background: #ffffff;
 }
 
@@ -200,7 +201,7 @@ nav .menu {
     text-align: center;
 }
 
-.img-wrapper{
+.img-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -224,8 +225,9 @@ nav .menu {
     flex-flow: column wrap;
 }
 
-.contact-us{
-    background: #222222;
+.contact-us {
+    background: #222222 url(img/map.png) 100% 100% no-repeat;
+    min-height: 680px;
 }
 
 .contact-headline {
@@ -235,22 +237,22 @@ nav .menu {
 
 .form {
     display: flex;
-    flex-flow: column wrap; 
+    flex-flow: row wrap;
     max-width: 940px;
     height: 350px;
 }
 
-.left-side{
-    max-width: 50%;
+.left-side {
+    max-width: 48.4%;
     margin: 0 15px 0 0;
 }
 
-.right-side{
-    max-width: 50%;
+.right-side {
+    max-width: 48.4%;
     margin: 0 0 0 15px;
 }
 
-.button-wrapper{
+.button-wrapper {
     margin: 0 auto;
 }
 
@@ -302,7 +304,11 @@ nav .menu {
     padding: 20px;
 }
 
-#send-button{
+::placeholder {
+    color: #bbbbbb;
+}
+
+#send-button {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
