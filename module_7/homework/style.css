@@ -89,7 +89,6 @@
 }
 
 body {
-    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -169,6 +168,7 @@ nav .menu {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    margin-bottom: 120px;
 }
 
 .service {
@@ -201,4 +201,60 @@ nav .menu {
     border: #fed136 solid 3px;
     border-radius: 45px;
     padding: 14px;
+}
+
+.contact-wrapper{
+    display: flex;
+    background: #222222;
+}
+
+.contact-headline{
+
+    margin-top: 110px;
+    color: #ffffff;
+}
+
+#your-name{
+    width: 455px;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border: #cccccc 1px solid;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#email{
+    width: 455px;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border: #cccccc 1px solid;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#subject{
+    width: 455px;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border: #cccccc 1px solid;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#textarea{
+    width: 455px;
+    height: 210px;
+    resize: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border: #cccccc 1px solid;
+    border-radius: 5px;
+    padding: 20px;
 }
