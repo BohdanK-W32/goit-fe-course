@@ -116,7 +116,7 @@ nav .menu {
     font-family: 'Yesteryear';
     font-weight: 400;
     font-style: normal;
-    font-size: 26px;
+    font-size: 26pt;
     text-decoration: none;
     color: #fed136;
 }
@@ -164,6 +164,10 @@ nav .menu {
     color: #fed136;
 }
 
+.services{
+    background: #ffffff;
+}
+
 .service-wrapper {
     display: flex;
     flex-flow: row wrap;
@@ -203,18 +207,29 @@ nav .menu {
     padding: 14px;
 }
 
-.contact-wrapper{
+.contact-wrapper {
+    margin: 0 auto;
+    width: 940px;
     display: flex;
+    flex-flow: column;
+}
+
+.contact-us{
     background: #222222;
 }
 
-.contact-headline{
-
+.contact-headline {
     margin-top: 110px;
     color: #ffffff;
 }
 
-#your-name{
+.form {
+    display: flex;
+    flex-flow: column wrap;
+    height: 310px;
+}
+
+#your-name {
     width: 455px;
     height: 50px;
     font-family: 'Montserrat', sans-serif;
@@ -223,9 +238,10 @@ nav .menu {
     border: #cccccc 1px solid;
     border-radius: 5px;
     padding: 20px;
+    margin: 15px;
 }
 
-#email{
+#email {
     width: 455px;
     height: 50px;
     font-family: 'Montserrat', sans-serif;
@@ -234,9 +250,10 @@ nav .menu {
     border: #cccccc 1px solid;
     border-radius: 5px;
     padding: 20px;
+    margin: 15px;
 }
 
-#subject{
+#subject {
     width: 455px;
     height: 50px;
     font-family: 'Montserrat', sans-serif;
@@ -245,9 +262,10 @@ nav .menu {
     border: #cccccc 1px solid;
     border-radius: 5px;
     padding: 20px;
+    margin: 15px;
 }
 
-#textarea{
+#textarea {
     width: 455px;
     height: 210px;
     resize: none;
@@ -257,4 +275,19 @@ nav .menu {
     border: #cccccc 1px solid;
     border-radius: 5px;
     padding: 20px;
+    margin: 15px;
+}
+
+#send-button{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #fed136;
+    color: #ffffff;
+    width: 240px;
+    height: 65px;
+    border: 1px solid #fed136;
+    border-radius: 5px;
 }
