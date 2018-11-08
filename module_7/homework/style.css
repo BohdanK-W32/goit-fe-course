@@ -242,21 +242,6 @@ nav .menu {
     height: 350px;
 }
 
-@media (max-width: 375px) {
-    .left-side{
-        width: 100%;
-    }
-    .right-side{
-        width: 100%;
-    }
-    .form{
-        height: none;
-    }
-    .service-wrapper{
-        flex-flow: column wrap;
-        justify-content: center;
-    }
-}
 
 .left-side {
     max-width: 48.4%;
@@ -309,7 +294,7 @@ nav .menu {
 }
 
 #textarea {
-    max-width: 455px;
+    width: 455px;
     height: 210px;
     resize: none;
     font-family: 'Montserrat', sans-serif;
