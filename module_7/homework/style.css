@@ -96,6 +96,7 @@ body {
     margin: 0 auto;
     max-width: 940px;
     width: 100%;
+    min-width: 320px;
 }
 
 header {
@@ -181,7 +182,7 @@ nav .menu {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    width: 290px;
+    max-width: 290px;
 }
 
 .service-headline {
@@ -220,14 +221,13 @@ nav .menu {
 
 .contact-wrapper {
     margin: 0 auto;
-    width: 940px;
+    max-width: 940px;
     display: flex;
     flex-flow: column wrap;
 }
 
 .contact-us {
     background: #222222 url(img/map.png) 100% 100% no-repeat;
-    min-height: 680px;
 }
 
 .contact-headline {
@@ -240,6 +240,22 @@ nav .menu {
     flex-flow: row wrap;
     max-width: 940px;
     height: 350px;
+}
+
+@media (max-width: 375px) {
+    .left-side{
+        width: 100%;
+    }
+    .right-side{
+        width: 100%;
+    }
+    .form{
+        height: none;
+    }
+    .service-wrapper{
+        flex-flow: column wrap;
+        justify-content: center;
+    }
 }
 
 .left-side {
@@ -293,7 +309,7 @@ nav .menu {
 }
 
 #textarea {
-    width: 455px;
+    max-width: 455px;
     height: 210px;
     resize: none;
     font-family: 'Montserrat', sans-serif;
