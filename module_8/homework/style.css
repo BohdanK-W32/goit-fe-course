@@ -87,6 +87,12 @@
     max-width: 700px;
 }
 
+.partner-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
 .main-wrapper {
     display: flex;
     flex-direction: column;
