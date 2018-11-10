@@ -52,7 +52,7 @@
     box-sizing: border-box;
 }
 
-.logo{
+.logo {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 20px;
@@ -73,7 +73,12 @@
     font-size: 14px;
     color: #ffffff;
     text-decoration: none;
-    padding: 11px 18px;
+    padding: 8px 18px;
+}
+
+.menu-item:hover {
+    border: 3px solid #ffffff;
+    border-radius: 50px;
 }
 
 .main,
@@ -82,7 +87,7 @@
     max-width: 700px;
 }
 
-.main-wrapper{
+.main-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,7 +101,7 @@
     background: url(img/background.jpg) 48% no-repeat;
 }
 
-.headline{
+.headline {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 30px;
@@ -104,7 +109,8 @@
     text-transform: uppercase;
     text-align: center;
 }
-.subtitle{
+
+.subtitle {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 18px;
@@ -113,7 +119,7 @@
     width: 67.4%;
 }
 
-.holiday-button{
+.holiday-button {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 14px;
@@ -127,7 +133,7 @@
     height: 40px;
 }
 
-.partner-button{
+.partner-button {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 14px;
@@ -140,6 +146,7 @@
     text-align: center;
     width: 280px;
     height: 40px;
+    margin-bottom: 45px;
 }
 
 .about {
@@ -147,6 +154,7 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    margin-top: 68px;
 }
 
 .partner-photo {
@@ -160,7 +168,10 @@
 .photo-3,
 .photo-4 {
     display: inline-flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .photo-1::after {
@@ -184,7 +195,7 @@
 .photo-3::after {
     content: url(img/coffee.png);
     width: 33px;
-    height: 33px;
+    height: 71px;
     position: absolute;
     left: 71%;
     top: 71%;
@@ -199,24 +210,37 @@
     top: 71%;
 }
 
-.name{
+.name {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 14px;
     color: #333333;
+    text-align: center;
+    margin-bottom: 18px;
 }
 
-.about-title{
+.about-title {
+    width: 68.75%;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 14px;
     color: #666666;
+    text-align: center;
 }
 
-.about-subtitle{
+.about-subtitle {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 22px;
     color: #333333;
     text-align: center;
+    margin-bottom: 14px;
+}
+
+.partner {
+    max-width: 320px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 28px;
 }
