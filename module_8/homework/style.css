@@ -181,7 +181,10 @@
 }
 
 .photo-1::after {
-    content: url(img/tv.png);
+    content: url(img/tv.svg);
+    background-color: #ff4e50;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
     width: 33px;
     height: 33px;
     position: absolute;
@@ -190,7 +193,10 @@
 }
 
 .photo-2::after {
-    content: url(img/chem.png);
+    content: url(img/chem.svg);
+    background-color: #ffa507;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
     width: 33px;
     height: 33px;
     position: absolute;
@@ -199,16 +205,22 @@
 }
 
 .photo-3::after {
-    content: url(img/coffee.png);
+    content: url(img/coffee.svg);
+    background-color: #1cd7ad;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
     width: 33px;
-    height: 71px;
+    height: 33px;
     position: absolute;
     left: 71%;
     top: 71%;
 }
 
 .photo-4::after {
-    content: url(img/telegram.png);
+    content: url(img/telegram.svg);
+    background-color: #4e73db;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
     width: 33px;
     height: 33px;
     position: absolute;
