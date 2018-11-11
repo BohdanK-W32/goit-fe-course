@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    height: 400px;
+    justify-content: space-between;
+}
+
+.header{
+    width: 100%;
+    background-color: brown;
+}
+
+.content{
+    width: 54.16%;
+    background-color: blue;
+}
+
+.sidebar-1, .sidebar-2{
+    width: 20.8%;
+}
+
+.sidebar-1{
+    background-color: yellow;
+}
+
+.sidebar-2{
+    background-color: red;
+}
+
+.footer{
+    width: 100%;
+    background-color: darkcyan;
+}
+
+.wrapper{
+    display: flex;
+    max-width: 960px;
+    height: 400px;
+}
+
+.main{
+    width: 70%;
+    background-color: darkturquoise;
+    height: 400px;
+}
+
+.aside{
+    width: 30%;
+    background-color: dimgray;
+    height: 400px;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    height: 800px;
+}
+
+.wrap-add{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.cont-1{
+    width: 100%;
+    background-color: red;
+    height: 200px;
+}
+
+.cont-2{
+    width: 40%;
+    background-color: green;
+    height: 300px;
+}
+
+.cont-3{
+    width: 60%;
+    background-color: blue;
+    height: 300px;
+}
+
+img{
+    max-width: 1300px;
+    object-fit: contain;
+}
+
+@media (max-width: 480px) {
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .main{
+        width: 100%;
+    }
+
+    .aside{
+        width: 100%;
+    }
+
+    .wrap-add{
+        flex-direction: column;
+    }
+
+    .cont-2{
+        width: 100%;
+    }
+
+    .cont-3{
+        width: 100%;
+    }
+}
