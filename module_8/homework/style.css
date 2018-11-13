@@ -188,7 +188,7 @@ nav{
 .photo-2,
 .photo-3,
 .photo-4 {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;

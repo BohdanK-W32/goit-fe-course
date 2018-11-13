@@ -22,4 +22,8 @@
     .partner-button{
         width: 32.28%;
     }
+
+    .partner-wrapper{
+        flex-flow: row wrap; 
+    }
 }
