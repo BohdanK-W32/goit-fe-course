@@ -1,3 +1,25 @@
 @media (min-width: 768px) {
-    body
+    body{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .headline{
+        font-size: 52px;
+        width: 68.14%;
+    }
+
+    .subline{
+        font-size: 24px;
+        width: 56.85%;
+    }
+
+    header{
+        display: flex;
+    }
+
+    .holiday-button, 
+    .partner-button{
+        width: 32.28%;
+    }
 }
