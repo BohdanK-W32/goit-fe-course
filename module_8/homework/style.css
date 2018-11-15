@@ -73,7 +73,6 @@ header{
 
 nav{
     display: flex;
-    flex-direction: column;
     margin-bottom: 110px;
 }
 
@@ -184,10 +183,7 @@ nav{
     border-radius: 60%;
 }
 
-.photo-1,
-.photo-2,
-.photo-3,
-.photo-4 {
+.photo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,9 +191,8 @@ nav{
     margin-bottom: 20px;
 }
 
-.photo-1::after {
-    content: url(img/tv.svg);
-    background-color: #ff4e50;
+.photo::after{
+    content: "";
     border: 4px solid #ffffff;
     border-radius: 50%;
     width: 33px;
@@ -205,42 +200,26 @@ nav{
     position: absolute;
     left: 71%;
     top: 71%;
+}
+
+.photo-1::after {
+    content: "";
+    background: url(img/tv.svg) 47% 45% no-repeat, #ff4e50;
 }
 
 .photo-2::after {
-    content: url(img/chem.svg);
-    background-color: #ffa507;
-    border: 4px solid #ffffff;
-    border-radius: 50%;
-    width: 33px;
-    height: 33px;
-    position: absolute;
-    left: 71%;
-    top: 71%;
+    content: "";
+    background: url(img/chem.svg) 49% 49% no-repeat, #ffa507;
 }
 
 .photo-3::after {
-    content: url(img/coffee.svg);
-    background-color: #1cd7ad;
-    border: 4px solid #ffffff;
-    border-radius: 50%;
-    width: 33px;
-    height: 33px;
-    position: absolute;
-    left: 71%;
-    top: 71%;
+    content: "";
+    background: url(img/coffee.svg) 46% 42% no-repeat, #1cd7ad;
 }
 
 .photo-4::after {
-    content: url(img/telegram.svg);
-    background-color: #4e73db;
-    border: 4px solid #ffffff;
-    border-radius: 50%;
-    width: 33px;
-    height: 33px;
-    position: absolute;
-    left: 71%;
-    top: 71%;
+    content: "";
+    background: url(img/telegram.svg) 40% 53% no-repeat, #4e73db;
 }
 
 .name {
@@ -271,9 +250,126 @@ nav{
 }
 
 .partner {
-    max-width: 320px;
-    display: inline-flex;
+    max-width: 317px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 28px;
+}
+
+@media (min-width: 768px) {
+    body{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .main{
+        height: 700px;
+    }
+
+    .about{
+        margin-top: 72px;
+    }
+
+    .about-subtitle{
+        margin-bottom: 30px;
+    }
+
+    .headline{
+        font-size: 52px;
+        width: 68.14%;
+        margin-bottom: 40px;
+    }
+
+    .subline{
+        font-size: 24px;
+        width: 56.85%;
+        margin-bottom: 34px;
+    }
+
+    .logo-wrapper{
+        margin-left: 40px;
+        margin-top: 23px;
+    }
+
+    header{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 160px;
+    }
+
+    nav{
+        margin-bottom: 0;
+        margin-right: 42px;
+    }
+
+    .holiday-button{
+        max-width: 226px;
+    }
+
+    .partner-button{
+        width: 193px;
+    }
+
+    .partner-wrapper{
+        flex-flow: row wrap;
+        height: 600px;
+        max-width: 800px;
+    }
+
+    .partner-1{
+        order: 1;
+    }
+
+    .partner-2{
+        order: 3;
+    }
+
+    .partner-3{
+        order: 2;
+    }
+
+    .partner-4{
+        order: 4;
+    }
+
+    .about {
+        display: flex;
+    }
+}
+
+@media (min-width: 1200px){
+
+    body{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .main{
+        max-width: 100%;
+        height: 700px;
+        background-size: 100% auto;
+    }
+
+    header{
+        width: 60.2%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 160px;
+    }
+
+    .partner-wrapper{
+        flex-wrap: nowrap;
+        max-width: max-content;
+        height: auto;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .about-title {
+        width: 68.75%;
+    }
 }
