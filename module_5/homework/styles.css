@@ -158,8 +158,7 @@ header nav li a {
 }
 
 .wrapper {
-    margin-bottom: 100px;
-    margin-left: 225px;
+    margin:0 112px 100px;
 }
 
 .wrapper .card:nth-child(4n+1) {
