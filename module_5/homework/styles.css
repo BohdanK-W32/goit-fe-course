@@ -158,7 +158,9 @@ header nav li a {
 }
 
 .wrapper {
-    margin:0 112px 100px;
+    display: flex;
+    justify-content: space-between;
+    margin:0 240px 100px;
 }
 
 .wrapper .card:nth-child(4n+1) {
