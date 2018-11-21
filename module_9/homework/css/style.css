@@ -4,9 +4,9 @@
     font-style: normal;
     font-weight: 400;
     src: local('Montserrat Regular'), local('Montserrat-Regular'),
-        url('fonts/montserrat-v12-latin-regular.woff2') format('woff2'),
+        url('../fonts/montserrat-v12-latin-regular.woff2') format('woff2'),
         /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/montserrat-v12-latin-regular.woff') format('woff');
+        url('../fonts/montserrat-v12-latin-regular.woff') format('woff');
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -16,9 +16,9 @@
     font-style: normal;
     font-weight: 700;
     src: local('Montserrat Bold'), local('Montserrat-Bold'),
-        url('fonts/montserrat-v12-latin-700.woff2') format('woff2'),
+        url('../fonts/montserrat-v12-latin-700.woff2') format('woff2'),
         /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/montserrat-v12-latin-700.woff') format('woff');
+        url('../fonts/montserrat-v12-latin-700.woff') format('woff');
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -28,9 +28,9 @@
     font-style: normal;
     font-weight: 300;
     src: local('Roboto Light'), local('Roboto-Light'),
-        url('fonts/roboto-v18-latin-300.woff2') format('woff2'),
+        url('../fonts/roboto-v18-latin-300.woff2') format('woff2'),
         /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/roboto-v18-latin-300.woff') format('woff');
+        url('../fonts/roboto-v18-latin-300.woff') format('woff');
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -40,13 +40,14 @@
     font-style: normal;
     font-weight: 400;
     src: local('Roboto'), local('Roboto-Regular'),
-        url('fonts/roboto-v18-latin-regular.woff2') format('woff2'),
+        url('../fonts/roboto-v18-latin-regular.woff2') format('woff2'),
         /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/roboto-v18-latin-regular.woff') format('woff');
+        url('../fonts/roboto-v18-latin-regular.woff') format('woff');
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 * {
+    outline: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -57,7 +58,7 @@ body{
     margin: 0 auto;
 }
 
-.logo {
+#logo {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 20px;
@@ -82,17 +83,15 @@ nav{
     list-style: none;
     margin-top: 25px;
 }
-.menu-item {
+#menu-item {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 14px;
     color: #ffffff;
     text-decoration: none;
-    padding: 8px 18px;
-    margin: 0 4px;
 }
 
-.menu-item:hover {
+#menu-item:hover {
     border: 2px solid #ffffff;
     border-radius: 50px;
 }
@@ -109,16 +108,16 @@ nav{
     align-items: center;
 }
 
-.main {
+#main {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     height: 542px;
-    background: url(img/background.jpg) 52% no-repeat;
+    background: url(../img/background.jpg) 52% no-repeat;
     background-size: auto 100%;
 }
 
-.headline {
+#headline {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 30px;
