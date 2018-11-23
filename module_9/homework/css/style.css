@@ -108,7 +108,7 @@ nav{
     align-items: center;
 }
 
-#main {
+#promo {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -124,8 +124,6 @@ nav{
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 19px;
-    width: 85.71%;
 }
 
 .subtitle {
