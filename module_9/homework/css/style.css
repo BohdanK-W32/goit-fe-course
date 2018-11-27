@@ -104,32 +104,32 @@ body{
 }
 
 .button{
-    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 11px 19px;
 }
 
 #holiday-button {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
     color: #ffffff;
-    text-decoration: none;
     background-color: #ff4e50;
-    border-radius: 30px;
-    text-align: center;
-    padding: 11px 19px;
+    text-decoration: none;
 }
 
 #partner-button {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
     color: #ff4e50;
-    text-decoration: none;
     background-color: transparent;
     border: 2px solid #ff4e50;
-    border-radius: 30px;
-    text-align: center;
-    padding: 11px 19px;
+}
+
+.partner {
+    max-width: 317px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 28px;
 }
 
 .partner-photo {
@@ -159,22 +159,22 @@ body{
 
 .photo-1::after {
     content: "";
-    background: url(img/tv.svg) 47% 45% no-repeat, #ff4e50;
+    background: url(../img/tv.svg) 47% 45% no-repeat, #ff4e50;
 }
 
 .photo-2::after {
     content: "";
-    background: url(img/chem.svg) 49% 49% no-repeat, #ffa507;
+    background: url(../img/chem.svg) 49% 49% no-repeat, #ffa507;
 }
 
 .photo-3::after {
     content: "";
-    background: url(img/coffee.svg) 46% 42% no-repeat, #1cd7ad;
+    background: url(../img/coffee.svg) 46% 42% no-repeat, #1cd7ad;
 }
 
 .photo-4::after {
     content: "";
-    background: url(img/telegram.svg) 40% 53% no-repeat, #4e73db;
+    background: url(../img/telegram.svg) 40% 53% no-repeat, #4e73db;
 }
 
 .name {
