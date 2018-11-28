@@ -54,7 +54,6 @@
 }
 
 body{
-    max-width: 768px;
     margin: 0 auto;
 }
 
@@ -68,21 +67,6 @@ body{
     padding: 10px;
 }
 
-header{
-    margin-bottom: 38px;
-}
-
-nav{
-    display: flex;
-    margin-bottom: 110px;
-}
-
-.menu {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin-top: 25px;
-}
 #menu-item {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -96,23 +80,8 @@ nav{
     border-radius: 50px;
 }
 
-.partner-wrapper{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-}
-
-.main-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 #promo {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    height: 542px;
+    height: 700px;
     background: url(../img/background.jpg) 52% no-repeat;
     background-size: auto 100%;
 }
@@ -120,58 +89,47 @@ nav{
 #headline {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 52px;
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
 }
 
-.subtitle {
+#subtitle {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 24px;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 19px;
-    width: 67.39%;
 }
 
-.holiday-button {
+.button{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 14px;
-    color: #ffffff;
-    text-decoration: none;
-    background-color: #ff4e50;
     border-radius: 30px;
-    padding: 11px 0 0;
     text-align: center;
-    width: 86.95%;
-    height: 40px;
+    padding: 11px 19px;
 }
 
-.partner-button {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: #ff4e50;
+#holiday-button {
+    color: #ffffff;
+    background-color: #ff4e50;
     text-decoration: none;
+}
+
+#partner-button {
+    color: #ff4e50;
     background-color: transparent;
     border: 2px solid #ff4e50;
-    border-radius: 30px;
-    padding: 9px 0 0;
-    text-align: center;
-    width: 86.96%;
-    height: 40px;
-    margin-bottom: 45px;
 }
 
-.about {
+.partner {
+    max-width: 317px;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-top: 68px;
+    margin-bottom: 28px;
 }
 
 .partner-photo {
@@ -201,22 +159,22 @@ nav{
 
 .photo-1::after {
     content: "";
-    background: url(img/tv.svg) 47% 45% no-repeat, #ff4e50;
+    background: url(../img/tv.svg) 47% 45% no-repeat, #ff4e50;
 }
 
 .photo-2::after {
     content: "";
-    background: url(img/chem.svg) 49% 49% no-repeat, #ffa507;
+    background: url(../img/chem.svg) 49% 49% no-repeat, #ffa507;
 }
 
 .photo-3::after {
     content: "";
-    background: url(img/coffee.svg) 46% 42% no-repeat, #1cd7ad;
+    background: url(../img/coffee.svg) 46% 42% no-repeat, #1cd7ad;
 }
 
 .photo-4::after {
     content: "";
-    background: url(img/telegram.svg) 40% 53% no-repeat, #4e73db;
+    background: url(../img/telegram.svg) 40% 53% no-repeat, #4e73db;
 }
 
 .name {
@@ -225,7 +183,6 @@ nav{
     font-size: 14px;
     color: #333333;
     text-align: center;
-    margin-bottom: 18px;
 }
 
 .about-title {
@@ -237,136 +194,10 @@ nav{
     text-align: center;
 }
 
-.about-subtitle {
+#partners-subtitle {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 22px;
     color: #333333;
     text-align: center;
-    margin-bottom: 14px;
-}
-
-.partner {
-    max-width: 317px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 28px;
-}
-
-@media (min-width: 768px) {
-    body{
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .main{
-        height: 700px;
-    }
-
-    .about{
-        margin-top: 72px;
-    }
-
-    .about-subtitle{
-        margin-bottom: 30px;
-    }
-
-    .headline{
-        font-size: 52px;
-        width: 68.14%;
-        margin-bottom: 40px;
-    }
-
-    .subline{
-        font-size: 24px;
-        width: 56.85%;
-        margin-bottom: 34px;
-    }
-
-    .logo-wrapper{
-        margin-left: 40px;
-        margin-top: 23px;
-    }
-
-    header{
-        width: 100%;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        margin-bottom: 160px;
-    }
-
-    nav{
-        margin-bottom: 0;
-        margin-right: 42px;
-    }
-
-    .holiday-button{
-        max-width: 226px;
-    }
-
-    .partner-button{
-        width: 193px;
-    }
-
-    .partner-wrapper{
-        flex-flow: row wrap;
-        height: 600px;
-        max-width: 800px;
-    }
-
-    .partner-1{
-        order: 1;
-    }
-
-    .partner-2{
-        order: 3;
-    }
-
-    .partner-3{
-        order: 2;
-    }
-
-    .partner-4{
-        order: 4;
-    }
-
-    .about {
-        display: flex;
-    }
-}
-
-@media (min-width: 1200px){
-
-    body{
-        max-width: 1440px;
-        margin: 0 auto;
-    }
-
-    .main{
-        max-width: 100%;
-        height: 700px;
-        background-size: 100% auto;
-    }
-
-    header{
-        width: 60.2%;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        margin-bottom: 160px;
-    }
-
-    .partner-wrapper{
-        flex-wrap: nowrap;
-        max-width: max-content;
-        height: auto;
-        justify-content: center;
-        margin-bottom: 40px;
-    }
-
-    .about-title {
-        width: 68.75%;
-    }
 }
