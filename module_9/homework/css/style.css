@@ -55,6 +55,19 @@
 
 body{
     margin: 0 auto;
+    max-width: 1440px;
+}
+
+header{
+    margin-bottom: 160px;
+}
+
+#logo-wrapper{
+    margin-top: 46px;
+}
+
+#login{
+    margin-top: 46px;
 }
 
 #logo {
@@ -73,10 +86,14 @@ body{
     font-size: 14px;
     color: #ffffff;
     text-decoration: none;
+    padding:  8px 16px;
+    margin: 0 20px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    transition: ease-in 200ms 0ms;
 }
 
 #menu-item:hover {
-    border: 2px solid #ffffff;
+    border: 2px solid rgba(255, 255, 255, 1);
     border-radius: 50px;
 }
 
@@ -93,6 +110,7 @@ body{
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 #subtitle {
@@ -101,6 +119,7 @@ body{
     font-size: 24px;
     color: #ffffff;
     text-align: center;
+    margin-bottom: 35px;
 }
 
 .button{
@@ -122,6 +141,7 @@ body{
     color: #ff4e50;
     background-color: transparent;
     border: 2px solid #ff4e50;
+    text-decoration: none;
 }
 
 .partner {
@@ -177,7 +197,7 @@ body{
     background: url(../img/telegram.svg) 40% 53% no-repeat, #4e73db;
 }
 
-.name {
+#name {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 14px;
@@ -185,7 +205,7 @@ body{
     text-align: center;
 }
 
-.about-title {
+#about-title {
     width: 68.75%;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
