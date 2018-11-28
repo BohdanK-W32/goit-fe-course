@@ -269,6 +269,14 @@ nav .menu {
     margin: 0 0 15px;
 }
 
+#your-name:valid{
+    outline-color: green;
+}
+
+#your-name:invalid{
+    outline-color: red;
+}
+
 #email {
     width: 100%;
     height: 50px;
@@ -279,6 +287,13 @@ nav .menu {
     border-radius: 5px;
     padding: 20px;
     margin: 15px 0;
+}
+
+#email:valid{
+    outline-color: green;
+}
+#email:invalid{
+    outline-color: red;
 }
 
 #subject {
@@ -303,6 +318,13 @@ nav .menu {
     border: #cccccc 1px solid;
     border-radius: 5px;
     padding: 20px;
+}
+
+#textarea:valid{
+    outline-color: green;
+}
+#textarea:invalid{
+    outline-color: red;
 }
 
 ::placeholder {
