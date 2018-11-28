@@ -53,20 +53,21 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0 auto;
     max-width: 1440px;
+    overflow-x: hidden;
 }
 
-header{
+header {
     margin-bottom: 160px;
 }
 
-#logo-wrapper{
+#logo-wrapper {
     margin-top: 46px;
 }
 
-#login{
+#login {
     margin-top: 46px;
 }
 
@@ -86,7 +87,7 @@ header{
     font-size: 14px;
     color: #ffffff;
     text-decoration: none;
-    padding:  8px 16px;
+    padding: 8px 16px;
     margin: 0 20px;
     border: 2px solid rgba(255, 255, 255, 0);
     transition: ease-in 200ms 0ms;
@@ -101,6 +102,11 @@ header{
     height: 700px;
     background: url(../img/background.jpg) 52% no-repeat;
     background-size: auto 100%;
+    margin-bottom: 70px;
+}
+
+#partners{
+    margin-bottom: 100px;
 }
 
 #headline {
@@ -122,7 +128,7 @@ header{
     margin-bottom: 35px;
 }
 
-.button{
+.button {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 14px;
@@ -166,12 +172,12 @@ header{
     margin-bottom: 20px;
 }
 
-.photo::after{
+.photo::after {
     content: "";
     border: 4px solid #ffffff;
     border-radius: 50%;
-    width: 33px;
-    height: 33px;
+    width: 44px;
+    height: 44px;
     position: absolute;
     left: 71%;
     top: 71%;
@@ -184,12 +190,12 @@ header{
 
 .photo-2::after {
     content: "";
-    background: url(../img/chem.svg) 49% 49% no-repeat, #ffa507;
+    background: url(../img/coffee.svg) 46% 42% no-repeat, #1cd7ad;
 }
 
 .photo-3::after {
     content: "";
-    background: url(../img/coffee.svg) 46% 42% no-repeat, #1cd7ad;
+    background: url(../img/chem.svg) 49% 49% no-repeat, #ffa507;
 }
 
 .photo-4::after {
@@ -220,4 +226,15 @@ header{
     font-size: 22px;
     color: #333333;
     text-align: center;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 320px) {
+    #logo-wrapper{
+        order: 2;
+    }
+
+    #login{
+        order: 1;
+    }
 }
