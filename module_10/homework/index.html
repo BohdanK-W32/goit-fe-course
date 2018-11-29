@@ -1,40 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Module 10. Homework</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="wrapper">
-        <header>
-            <div id="logo-wrapper"><a id="logo-wrapper__logo" href="#">MoGo</a></div>
-            <nav class="navbar">
-                <ul class="menu">
-                    <li class="menu__menu-item"><a class="menu__menu-item__link" href="#">about</a></li>
-                    <li class="menu__menu-item"><a class="menu__menu-item__link" href="#">service</a></li>
-                    <li class="menu__menu-item"><a class="menu__menu-item__link" href="#">work</a></li>
-                    <li class="menu__menu-item"><a class="menu__menu-item__link" href="#">blog</a></li>
-                    <li class="menu__menu-item"><a class="menu__menu-item__link" href="#">contact</a></li>
-                    <li class="menu__menu-item"></li>
-                    <li class="menu__menu-item"></li>
-                </ul>
-            </nav>
-        </header>
+        <!-- Promo Section -->
         <section id="promo">
+            <!-- Header -->
+            <header>
+                <div id="logo-wrapper"><a id="logo-wrapper__logo" href="#">MoGo</a></div>
+                <!-- Navigation -->
+                <nav class="navbar">
+                    <ul id="menu">
+                        <li class="menu-item"><a class="menu-link" href="#">about</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">service</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">work</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">blog</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">contact</a></li>
+                        <li class="menu-item"></li>
+                        <li class="menu-item"></li>
+                    </ul>
+                </nav>
+            </header>
             <h2 id="subline">Creative Template</h2>
             <h3 id="headline">welcome to mogo</h3>
             <a id="learn-more-link" href="#">learn more</a>
         </section>
+        <!-- Main Section -->
         <section id="main">
-            <div id="services">
+            <!-- Services -->
+            <section id="services">
                 <h3 id="services-subline">We work with</h3>
                 <h2 id="services-headline">amazing services</h2>
-                
-            </div>
+                <div id="service-wrapper">
+                    <div class="service">
+                        <h6 class="service-type">Photography</h6>
+                        <span class="service-type-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor.</span>
+                    </div>
+                    <div class="service">
+                        <h6 class="service-type">seo</h6>
+                        <span class="service-type-about">Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod.</span>
+                    </div>
+                    <div class="service">
+                        <h6 class="service-type">Web Design</h6>
+                        <span class="service-type-about">Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor.</span>
+                    </div>
+                    <div class="service">
+                        <h6 class="service-type">Css/Html</h6>
+                        <span class="service-type-about">Lorem dolor sit amet, consectetur adipiscing elit, sed do
+                            tempor.</span>
+                    </div>
+                    <div class="service">
+                        <h6 class="service-type">Creativity</h6>
+                        <span class="service-type-about">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor.</span>
+                    </div>
+                    <div class="service">
+                        <h6 class="service-type">digital</h6>
+                        <span class="service-type-about">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</span>
+                    </div>
+                </div>
+            </section>
+            <!-- Team -->
+            <section id="team">
+                <h3 id="team-subline">Who we are</h3>
+                <h2 id="team-headline">Meet our team</h2>
+                <span id="team-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
+                <div class="team-member">
+                    <h4 class="name">Matthew Dix</h4>
+                    <span class="position">Graphic Design</span>
+                    <div class="team-member-photo">
+                        <div class="overlay">
+                            <div class="button-wrapper">
+                                <a class="social-link" href="#"><img src="img/facebook.svg" alt="Facebook"></a>
+                                <a class="social-link" href="#"><img src="img/twitter.svg" alt="Twiter"></a>
+                                <a class="social-link" href="#"><img src="img/pinterest.svg" alt="Pinterest"></a>
+                                <a class="social-link" href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <h4 class="name">Christopher Campbell</h4>
+                    <span class="position">Branding/UX design</span>
+                    <div class="team-member-photo">
+                        <div class="overlay">
+                            <div class="button-wrapper">
+                                <a class="social-link" href="#"><img src="img/facebook.svg" alt="Facebook"></a>
+                                <a class="social-link" href="#"><img src="img/twitter.svg" alt="Twiter"></a>
+                                <a class="social-link" href="#"><img src="img/pinterest.svg" alt="Pinterest"></a>
+                                <a class="social-link" href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <h4 class="name">Michael Fertig</h4>
+                    <span class="position">Developer</span>
+                    <div class="team-member-photo">
+                        <div class="overlay">
+                            <div class="button-wrapper">
+                                <a class="social-link" href="#"><img src="img/facebook.svg" alt="Facebook"></a>
+                                <a class="social-link" href="#"><img src="img/twitter.svg" alt="Twiter"></a>
+                                <a class="social-link" href="#"><img src="img/pinterest.svg" alt="Pinterest"></a>
+                                <a class="social-link" href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
+        <!-- Footer -->
+        <footer>
+            <span id="footer-info">&copy; 2016 MoGo free PSD template by Laaqiq</span>
+            <form action="" method="post">
+                <input type="email" name="Email" id="email">
+                <button id="form-button">subscribe</button>
+            </form>
+        </footer>
     </div>
 </body>
+
 </html>
