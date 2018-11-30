@@ -68,11 +68,11 @@ header{
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
-    margin-bottom: 164px;
+    margin-bottom: 15.1vh;
     min-width: 1200px;
 }
 
-#logo{
+.logo-block__logo{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 30px;
@@ -80,17 +80,17 @@ header{
     text-decoration: none;
 }
 
-#menu{
+.menu{
     display: flex;
     list-style: none;
     margin: 11px 0 0;
 }
 
-.menu-item{
+.menu__menu-item{
     margin: 0 27px 0;
 }
 
-.menu-link{
+.menu__menu-link{
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 14px;
@@ -102,13 +102,17 @@ header{
     transition: 0.2s ease-in;
 }
 
-.menu-link:hover{
+.menu__menu-link--hover:hover{
     color: #fce38a;
     border-bottom: 3px solid #fce38a;
     transition: 200ms ease-in;
 }
 
-#promo {
+.menu__menu-link--svg-hover:hover .menu__link-svg{
+    fill: #fce38a;
+} 
+
+.promo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,31 +121,34 @@ header{
     background-size: cover;
     max-width: 100vw;
     height: 100vh;
+    margin-bottom: 46px;
 }
 
-#subline{
+.subline-promo{
     font-family: 'Kaushan Script', serif;
     font-size: 72px;
     font-weight: 400;
     color: #fff;
     text-align: center;
     margin: 0;
-    margin-bottom: 42px;
+    margin-bottom: 3.9vh;
 }
 
-#headline{
+.headline-promo{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 150px;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: -6px;
+    line-height: 0.92;
+    font-stretch: condensed;
     text-align: center;
     margin: 0;
-    margin-bottom: 144px;
+    margin-bottom: 60px;
 }
 
-#learn-more-link{
+.link-read-more{
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 14px;
@@ -153,17 +160,42 @@ header{
     text-align: center;
 }
 
-#services-subline{
+.subline-basic{
     font-family: 'Kaushan Script', serif;
     font-size: 24px;
     font-weight: 400;
     text-align: center;
+    margin-bottom: 22px;
 }
 
-#services-headline{
+.headline-basic{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
+}
+
+.services-wrapper{
+    display: flex;
+    
+}
+
+.service{
+    max-width: 270px;
+}
+
+.service__service-type{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.service__service-type-about{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 15px;
+    color: #999;
 }
