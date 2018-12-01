@@ -24,6 +24,18 @@
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* montserrat-500 - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Montserrat Medium'), local('Montserrat-Medium'),
+        url('../fonts/montserrat-v12-latin-500.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserrat-v12-latin-500.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 /* montserrat-700 - latin */
 @font-face {
     font-family: 'Montserrat';
@@ -64,7 +76,7 @@
 
 /* Promo Section Styles */
 
-header{
+.header {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -72,7 +84,7 @@ header{
     min-width: 1200px;
 }
 
-.logo-block__logo{
+.logo-block__logo {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 30px;
@@ -80,19 +92,19 @@ header{
     text-decoration: none;
 }
 
-.menu{
+.menu {
     display: flex;
     list-style: none;
     margin: 11px 0 0;
 }
 
-.menu__menu-item{
+.menu__menu-item {
     margin: 0 27px 0;
 }
 
-.menu__menu-link{
+.menu__menu-link {
     font-family: 'Montserrat';
-    font-weight: 400;
+    font-weight: 500;
     font-size: 14px;
     color: #fff;
     text-decoration: none;
@@ -102,15 +114,15 @@ header{
     transition: 0.2s ease-in;
 }
 
-.menu__menu-link--hover:hover{
+.menu__menu-link--hover:hover {
     color: #fce38a;
     border-bottom: 3px solid #fce38a;
     transition: 200ms ease-in;
 }
 
-.menu__menu-link--svg-hover:hover .menu__link-svg{
+.menu__menu-link--svg-hover:hover .menu__link-svg {
     fill: #fce38a;
-} 
+}
 
 .promo {
     display: flex;
@@ -124,7 +136,7 @@ header{
     margin-bottom: 46px;
 }
 
-.subline-promo{
+.subline-promo {
     font-family: 'Kaushan Script', serif;
     font-size: 72px;
     font-weight: 400;
@@ -134,7 +146,7 @@ header{
     margin-bottom: 3.9vh;
 }
 
-.headline-promo{
+.headline-promo {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 150px;
@@ -148,7 +160,7 @@ header{
     margin-bottom: 60px;
 }
 
-.link-read-more{
+.link-read-more {
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 14px;
@@ -160,7 +172,9 @@ header{
     text-align: center;
 }
 
-.subline-basic{
+/* Main Section */
+
+.subline-basic {
     font-family: 'Kaushan Script', serif;
     font-size: 24px;
     font-weight: 400;
@@ -168,7 +182,7 @@ header{
     margin-bottom: 22px;
 }
 
-.headline-basic{
+.headline-basic {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 30px;
@@ -178,7 +192,7 @@ header{
     margin-bottom: 100px;
 }
 
-.headline-basic--after::after{
+.headline-basic--after::after {
     content: "";
     width: 60px;
     height: 3px;
@@ -189,34 +203,203 @@ header{
     transform: translateX(-50%);
 }
 
-.services{
+/* Services */
+
+.services {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
 }
 
-.service-wrapper{
+.service-wrapper {
     display: flex;
     flex-flow: column wrap;
     width: 60%;
-    height: 240px;
+    height: 350px;
+    align-items: center;
 }
 
-.service{
+.service {
+    position: relative;
     max-width: 270px;
+    margin-bottom: 100px;
 }
 
-.service__type{
+.service__type {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 14px;
     color: #333;
     text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 20px;
 }
 
-.service__type-about{
+.service__type-about {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 15px;
     color: #999;
+}
+
+.service--before:before {
+    content: "";
+    position: absolute;
+    left: -55px;
+    top: 5px;
+}
+
+.service--before-photography:before {
+    content: url(../img/photography.svg);
+}
+
+.service--before-seo:before {
+    content: url(../img/seo.svg);
+}
+
+.service--before-web-design:before {
+    content: url(../img/web-design.svg);
+}
+
+.service--before-css-html:before {
+    content: url(../img/css_html.svg);
+}
+
+.service--before-creativity:before {
+    content: url(../img/creativity.svg);
+}
+
+.service--before-digital:before {
+    content: url(../img/digital.svg);
+}
+
+/* Team */
+
+.team{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.team-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.team__about{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 15px;
+    color: #999;
+    text-align: center;
+    max-width: 49.69%;
+}
+
+.team-member{
+    height: 560px;
+}
+
+.team-member__photo{
+    width: 380px;
+    height: 470px;
+    position: relative;
+    background: #95e1d3;
+    background-position: -10px -10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.team-member__photo--hover:hover{
+    left: -10px;
+    top: -10px;
+    transition: all 200ms ease-in-out;
+}
+
+.team-member__photo--hover:hover .overlay{
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.team-member__name{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #333;
+    text-align: center;
+}
+
+.team-member__position{
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    color: #999;
+    text-align: center;
+}
+
+.overlay{
+    display: flex;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 0deg, rgba(252,227,138, 0.9) 0%, rgba(243,129,129, 0.9) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Footer */
+
+.footer{
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1200px;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer__info{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer__info-last-word{
+    color: #f38181;
+}
+
+/* Subscribe form */
+
+.subscribe-form__email{
+    width: 230px;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    color: #333;
+    border: 1px solid #e5e5e5;
+    padding-left: 13px;
+    outline: none;
+}
+.subscribe-form__email--placeholder::placeholder{
+    color: #ccc;
+}
+
+.subscribe-form__button{
+    width: 150px;
+    height: 44px;
+    background-color: #95e1d3;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    margin-left: -5px;
+    outline: none;
 }

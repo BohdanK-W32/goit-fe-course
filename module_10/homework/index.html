@@ -15,7 +15,7 @@
         <!-- Promo Section -->
         <section class="promo">
             <!-- Header -->
-            <header>
+            <header class="header">
                 <div class="logo-block"><a class="logo-block__logo" href="#">MoGo</a></div>
                 <!-- Navigation -->
                 <nav class="navbar">
@@ -73,62 +73,76 @@
                 </div>
             </section>
             <!-- Team -->
-            <section id="team">
+            <section class="team">
                 <h3 class="subline-basic">Who we are</h3>
                 <h2 class="headline-basic headline-basic--after">Meet our team</h2>
                 <span class="team__about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
-                <div class="team-member">
-                    <h4 class="team-member__name">Matthew Dix</h4>
-                    <span class="team-member__position">Graphic Design</span>
-                    <div class="team-member__photo">
-                        <div class="overlay">
-                            <div class="button-wrapper">
-                                <a class="social-link" href="#"><img src="img/facebook.svg" alt="Facebook"></a>
-                                <a class="social-link" href="#"><img src="img/twitter.svg" alt="Twiter"></a>
-                                <a class="social-link" href="#"><img src="img/pinterest.svg" alt="Pinterest"></a>
-                                <a class="social-link" href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                <div class="team-wrapper">
+                    <div class="team-member">
+                        <div class="team-member__photo team-member__photo--hover">
+                            <picture>
+                                <source srcset="img/dix@2x.jpeg 2x">
+                                <img src="img/dix@1x.jpeg" alt="Matthew Dix photo">
+                            </picture>
+                            <div class="overlay">
+                                <div class="button-wrapper">
+                                    <a class="social-link" href="#"><img src="img/facebook.svg" alt="Facebook"></a>
+                                    <a class="social-link" href="#"><img src="img/twitter.svg" alt="Twiter"></a>
+                                    <a class="social-link" href="#"><img src="img/pinterest.svg" alt="Pinterest"></a>
+                                    <a class="social-link" href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                                </div>
                             </div>
                         </div>
+                        <h4 class="team-member__name">Matthew Dix</h4>
+                        <span class="team-member__position">Graphic Design</span>
                     </div>
-                </div>
-                <div class="team-member">
-                    <h4 class="team-member__name">Christopher Campbell</h4>
-                    <span class="team-member__position">Branding/UX design</span>
-                    <div class="team-member__photo">
-                        <div class="overlay">
-                            <div class="button-wrapper">
-                                <a class="social-link" href="#"><img src="img/facebook.svg" alt="Facebook"></a>
-                                <a class="social-link" href="#"><img src="img/twitter.svg" alt="Twiter"></a>
-                                <a class="social-link" href="#"><img src="img/pinterest.svg" alt="Pinterest"></a>
-                                <a class="social-link" href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                    <div class="team-member">
+                        <div class="team-member__photo team-member__photo--hover">
+                            <picture>
+                                <source srcset="img/campbell@2x.jpeg 2x">
+                                <img src="img/campbell@1x.jpeg" alt="Christopher Campbell photo">
+                            </picture>
+                            <div class="overlay">
+                                <div class="button-wrapper">
+                                    <a class="social-link" href="#"><img src="img/facebook.svg" alt="Facebook"></a>
+                                    <a class="social-link" href="#"><img src="img/twitter.svg" alt="Twiter"></a>
+                                    <a class="social-link" href="#"><img src="img/pinterest.svg" alt="Pinterest"></a>
+                                    <a class="social-link" href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                                </div>
                             </div>
                         </div>
+                        <h4 class="team-member__name">Christopher Campbell</h4>
+                        <span class="team-member__position">Branding/UX design</span>
                     </div>
-                </div>
-                <div class="team-member">
-                    <h4 class="team-member__name">Michael Fertig</h4>
-                    <span class="team-member__position">Developer</span>
-                    <div class="team-member__photo">
-                        <div class="overlay">
-                            <div class="button-wrapper">
-                                <a class="social-link" href="#"><img src="img/facebook.svg" alt="Facebook"></a>
-                                <a class="social-link" href="#"><img src="img/twitter.svg" alt="Twiter"></a>
-                                <a class="social-link" href="#"><img src="img/pinterest.svg" alt="Pinterest"></a>
-                                <a class="social-link" href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                    <div class="team-member">
+                        <div class="team-member__photo team-member__photo--hover">
+                            <picture>
+                                <source srcset="img/fertig@2x.jpeg 2x">
+                                <img src="img/fertig@1x.jpeg" alt="Michael Fertig photo">
+                            </picture>
+                            <div class="overlay">
+                                <div class="button-wrapper">
+                                    <a class="social-link" href="#"><img src="img/facebook.svg" alt="Facebook"></a>
+                                    <a class="social-link" href="#"><img src="img/twitter.svg" alt="Twiter"></a>
+                                    <a class="social-link" href="#"><img src="img/pinterest.svg" alt="Pinterest"></a>
+                                    <a class="social-link" href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                                </div>
                             </div>
                         </div>
+                        <h4 class="team-member__name">Michael Fertig</h4>
+                        <span class="team-member__position">Developer</span>
                     </div>
                 </div>
             </section>
         </section>
         <!-- Footer -->
-        <footer>
-            <span id="footer-info">&copy; 2016 MoGo free PSD template by Laaqiq</span>
-            <form action="" method="post">
-                <input type="email" name="Email" id="email">
-                <button id="form-button">subscribe</button>
+        <footer class="footer">
+            <span class="footer__info">&copy; 2016 MoGo free PSD template by <span class="footer__info-last-word">Laaqiq</span></span>
+            <form class="subscribe-form" action="" method="post">
+                <input type="email" name="Email" class="subscribe-form__email subscribe-form__email--placeholder" placeholder="Your Email...">
+                <button class="subscribe-form__button">subscribe</button>
             </form>
         </footer>
     </div>
