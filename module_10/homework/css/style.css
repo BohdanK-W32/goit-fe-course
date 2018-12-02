@@ -354,8 +354,16 @@
 
 /* Social wrapper */
 
-.social-wrapper {
-    width: 224px;
+.social-wrapper__link{
+    border: none;
+    border-left: 1px solid #f9bd87;
+    border-right: 1px solid #f9bd87;
+}
+
+.social-wrapper__button{
+    width: 56px;
+    height: 56px;
+    background-color: #fce38a;
 }
 
 /* Footer */
