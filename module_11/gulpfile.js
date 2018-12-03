@@ -12,6 +12,7 @@ const imagemin = require('gulp-imagemin');
 const svgstore = require('gulp-svgstore');
 const plumber = require('gulp-plumber');
 const rigger = require('gulp-rigger');
+const stylelint = require('gulp-stylelint');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
@@ -35,6 +36,11 @@ gulp.task('styles', () => {
   return gulp
     .src('./src/sass/styles.scss')
     .pipe(plumber())
+    .pipe(
+      stylelint({
+        reporters: [{ formatter: 'string', console: true }]
+      })
+    )
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
     .pipe(gcmq())

@@ -355,6 +355,8 @@
 /* Social wrapper */
 
 .social-wrapper__link{
+    width: 56px;
+    height: 56px;
     border: none;
     border-left: 1px solid #f9bd87;
     border-right: 1px solid #f9bd87;
@@ -364,6 +366,7 @@
     width: 56px;
     height: 56px;
     background-color: #fce38a;
+    border: none;
 }
 
 /* Footer */
