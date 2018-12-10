@@ -77,8 +77,12 @@
 /* Promo Section Styles */
 
 .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 30px;
     margin-bottom: 15.1vh;
     min-width: 1200px;
@@ -93,6 +97,8 @@
 }
 
 .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style: none;
     margin: 11px 0 0;
@@ -111,23 +117,45 @@
     text-transform: uppercase;
     border-bottom: 3px solid rgba(255, 255, 255, 0);
     padding-bottom: 9px;
+    -webkit-transition: 0.2s ease-in;
+    -o-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
 }
 
 .menu__menu-link--hover:hover {
     color: #fce38a;
     border-bottom: 3px solid #fce38a;
+    -webkit-transition: 200ms ease-in;
+    -o-transition: 200ms ease-in;
+    transition: 200ms ease-in;
+}
+
+.menu__link-svg{
+    -webkit-transition: 200ms ease-in;
+    -o-transition: 200ms ease-in;
     transition: 200ms ease-in;
 }
 
 .menu__menu-link--svg-hover:hover .menu__link-svg {
     fill: #fce38a;
+    -webkit-transition: 200ms ease-in;
+    -o-transition: 200ms ease-in;
+    transition: 200ms ease-in;
 }
 
 .promo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.9)), to(rgba(243, 129, 129, 0.9))), url(../img/background.jpg) no-repeat;
+    background: -o-linear-gradient(bottom, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url(../img/background.jpg) no-repeat;
     background: linear-gradient(0deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url(../img/background.jpg) no-repeat;
     background-position: center;
     background-size: cover;
@@ -174,6 +202,10 @@
 
 /* Main Section */
 
+.main{
+    margin-bottom: 82px;
+}
+
 .subline-basic {
     font-family: 'Kaushan Script', serif;
     font-size: 24px;
@@ -200,23 +232,39 @@
     position: absolute;
     top: 70px;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 
 /* Services */
 
 .services {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .service-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
     width: 1080px;
     height: 350px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .service {
@@ -251,40 +299,52 @@
 }
 
 .service--before-photography:before {
-    content: url(../img/photography.svg);
+    content: url(../img/svg/photography.svg);
 }
 
 .service--before-seo:before {
-    content: url(../img/seo.svg);
+    content: url(../img/svg/seo.svg);
 }
 
 .service--before-web-design:before {
-    content: url(../img/web-design.svg);
+    content: url(../img/svg/web-design.svg);
 }
 
 .service--before-css-html:before {
-    content: url(../img/css_html.svg);
+    content: url(../img/svg/css_html.svg);
 }
 
 .service--before-creativity:before {
-    content: url(../img/creativity.svg);
+    content: url(../img/svg/creativity.svg);
 }
 
 .service--before-digital:before {
-    content: url(../img/digital.svg);
+    content: url(../img/svg/digital.svg);
 }
 
 /* Team */
 
 .team {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .team-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
 }
 
 .team__about {
@@ -305,19 +365,28 @@
     width: 380px;
     height: 470px;
     position: relative;
-    background: #95e1d3;
-    background-position: -10px -10px;
-    transition: all 0.2s ease-in-out;
+    -webkit-box-shadow: 0px 0px #95e1d3;
+            box-shadow: 0px 0px #95e1d3;
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 .team-member__photo--hover:hover {
-    left: -10px;
-    top: -10px;
+    -webkit-transform: translate(-10px, -10px);
+        -ms-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px);
+    -webkit-box-shadow: 10px 10px #95e1d3;
+            box-shadow: 10px 10px #95e1d3;
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
 }
 
 .team-member__photo--hover:hover .overlay {
     opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
@@ -340,12 +409,20 @@
 }
 
 .overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     opacity: 0;
     width: 100%;
     height: 100%;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.9)), to(rgba(243, 129, 129, 0.9)));
+    background: -o-linear-gradient(bottom, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
     background: linear-gradient(0deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
     position: absolute;
     top: 0;
@@ -367,17 +444,48 @@
     height: 56px;
     background-color: #fce38a;
     border: none;
+    border-left: 1px solid #f38181;
+    border-right: 1px solid #f38181;
+    margin: -3px;
+    -webkit-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+.social-wrapper__button--hover:hover{
+    background-color: #f38181;
+}
+
+.social-wrapper__button--hover:hover .social-wrapper__svg{
+    fill: #fff;
+}
+
+.social-wrapper__button:nth-of-type(1){
+    border-left: none;
+}
+
+.social-wrapper__button:nth-last-of-type(1){
+    border-right: none;
 }
 
 /* Footer */
 
 .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     max-width: 1200px;
     height: 60px;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0 auto;
     border-top: 1px solid #e5e5e5;
 }
@@ -406,6 +514,18 @@
     border: 1px solid #e5e5e5;
     padding-left: 13px;
     outline: none;
+}
+
+.subscribe-form__email--placeholder::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+.subscribe-form__email--placeholder:-ms-input-placeholder {
+    color: #ccc;
+}
+
+.subscribe-form__email--placeholder::-ms-input-placeholder {
+    color: #ccc;
 }
 
 .subscribe-form__email--placeholder::placeholder {
