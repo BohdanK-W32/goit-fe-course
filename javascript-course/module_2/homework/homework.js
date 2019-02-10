@@ -10,7 +10,7 @@ let total = 0;
 do {
     userInput = prompt(enterNumber);
 
-    if (isNaN(userInput) === true || userInput === '') {
+    if (isNaN(userInput) || userInput === '') {
         alert(notANumber);
     } else {
         numbers.push(Number(userInput));
