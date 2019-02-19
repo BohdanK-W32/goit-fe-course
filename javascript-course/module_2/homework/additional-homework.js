@@ -1,5 +1,7 @@
 'use strict';
 
+// Variables
+
 const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
 let attempts = 3;
 let pass;
@@ -8,6 +10,8 @@ const noAttempts = "У вас закончились попытки, аккау�
 const wrongPass = 'Неверный пароль, у вас осталось попыток: ';
 const enterPass = 'Введите пароль:';
 const welcome = 'Добро пожаловать!';
+
+// Loop of check a password
 
 do {
     pass = prompt(enterPass);
