@@ -97,18 +97,34 @@
 //   console.log( checkForSpam('Get best sale offers now!') ); // true
 //   console.log( checkForSpam('[SPAM] How to earn fast money?') ); // true
 
-function getPx (str) {
-    if (str === '' || isNaN(str) === false) {
-      return null;
-    } else {
-      let parsedStr = parseFloat(str);
-      return parsedStr;
-    }
-}
-
+// function getPx (str) {
+//     if (str === '' || isNaN(str) === false) {
+//       return null;
+//     } else {
+//       let parsedStr = parseFloat(str);
+//       return parsedStr;
+//     }
+// }
 // Вызовы функции для проверки
-console.log( getPx("10px") === 10 ); // должно быть:  true
-console.log( getPx("10.5") === 10.5 ); // должно быть:  true
-console.log( getPx("0") === 0 ); // должно быть:  true
-console.log( getPx(-1) ); // должно быть:  null
-console.log( getPx(10) ); // должно быть:  null
+// console.log( getPx("10px") === 10 ); // должно быть:  true
+// console.log( getPx("10.5") === 10.5 ); // должно быть:  true
+// console.log( getPx("0") === 0 ); // должно быть:  true
+// console.log( getPx(-1) ); // должно быть:  null
+// console.log( getPx(10) ); // должно быть:  null
+
+// let prmpt = +prompt('Ввведіть число');
+// let fib = (max) => {
+//   let fibNum = 1;
+//   let first = 0;
+//   let second = 1;
+//   let arr = [];
+//   do {
+//     arr.push(fibNum);
+//     fibNum = first + second;
+//     first = second;
+//     second = fibNum;
+//   } while (fibNum <= max);
+//   console.log(arr);
+//   return;
+// }
+// fib(prmpt);
