@@ -13,22 +13,22 @@
   Создать несколько экземпляров с разными значениями свойств, вывесди их в консоль.
 */
 
-// function Account (login, email) {
-//     this.login = login, 
-//     this.email = email
-// }
-// Account.prototype.getInfo = function () {
-//     console.log(`Login: ${this.login}, Email: ${this.email}`);
-// };
-// Account.prototype.sumAmount = function (value) {
-//     const sum = this.login;
-//     console.log(sum.repeat(value));
-// }
-// const account = new Account('Mangozedog', 'mango@dog.woof');
-// const acc = new Account('pid stu', 'mango@dog.woof');
-// console.log(Account.prototype.getInfo); // function
-// account.getInfo(); // Login: Mangozedog, Email: mango@dog.woof
-// acc.sumAmount(20);
+function Account (login, email) {
+    this.login = login, 
+    this.email = email
+}
+Account.prototype.getInfo = function () {
+    console.log(`Login: ${this.login}, Email: ${this.email}`);
+};
+Account.prototype.sumAmount = function (value) {
+    const sum = this.login;
+    console.log(sum.repeat(value));
+}
+const account = new Account('Mangozedog', 'mango@dog.woof');
+const acc = new Account('zis iz', 'mango@dog.woof');
+console.log(Account.prototype.getInfo); // function
+account.getInfo(); // Login: Mangozedog, Email: mango@dog.woof
+acc.sumAmount(7);
 
 let DB = [
     {name: 'Xiaomi', amount: 46, price: 320}, 
