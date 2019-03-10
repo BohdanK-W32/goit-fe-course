@@ -47,21 +47,19 @@ const products = {
     this.name = name, 
     this.productDatabase = productDatabase, 
     this.customerMoney = 0, 
-    this.totalPrice = 0, 
     this.getCustomerMoney = function (value) {this.customerMoney = value}, 
     this.countTotalPrice = function (order) {
+      let totalPrice = 0;
       for (const key in order) {
-        this.totalPrice += order[key] * this.productDatabase[key];
+        totalPrice += order[key] * this.productDatabase[key];
       }
-      return this.totalPrice;
+      return totalPrice;
     }, 
-    this.countChange = function (totalPrice) {
-      if (this.customerMoney >= this.totalPrice) {
-        return this.customerMoney - this.totalPrice;
-      } else {
-        return null;
-      }
-    }, 
+    this.countChange = function (totalPrice = this.countTotalPrice(order)) {
+      let res = this.customerMoney >= totalPrice 
+      ? this.customerMoney - totalPrice
+      : null;
+      return res}, 
     this.onSuccess = () => console.log(`Спасибо за покупку, ваша сдача ${change} UAH!`), 
     this.onError = () => console.log('Очень жаль, вам не хватает денег на покупки.'), 
     this.reset = function () {this.customerMoney = 0}
