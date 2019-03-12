@@ -13,53 +13,146 @@
   Создать несколько экземпляров с разными значениями свойств, вывесди их в консоль.
 */
 
-function Account (login, email) {
-    this.login = login, 
-    this.email = email
+
+
+
+/* ====================================   C l a s s   ==================================== */
+
+
+/*
+  Напиши ES6 класс StringBuilder.
+  
+  На вход (в конструкторе) он получает один параметр string - строку,
+  которую записывает в свойство _value.
+  
+  Добавь классу следующие методы:
+    - геттер value - возвращает текущее значение поля _value
+    - append(str) - получает парметр str (строку) и добавляет ее в конец _value
+    - prepend(str) - получает парметр str (строку) и добавляет ее в начало value
+    - pad(str) - получает парметр str (строку) и добавляет ее в начало и в конец _value
+*/
+
+class StringBuilder {
+  constructor (string) {
+    this._value = string;
+  }
+  get value () {
+    return this._value;
+  }
+  append (str) {
+    this._value = str + this._value;
+  }
+  prepend (str) {
+    this._value += str;
+  }
+  pad (str) {
+    this._value = str + this._value + str;
+  }
 }
-Account.prototype.getInfo = function () {
-    console.log(`Login: ${this.login}, Email: ${this.email}`);
-};
-Account.prototype.sumAmount = function (value) {
-    const sum = this.login;
-    console.log(sum.repeat(value));
+const builder = new StringBuilder('.');
+
+builder.append('^'); 
+console.log(builder.value); // '.^'
+
+builder.prepend('^'); 
+console.log(builder.value); // '^.^'
+
+builder.pad('='); 
+console.log(builder.value); // '=^.^='
+
+/*
+ * Напиши класс Car с указанными свойствами и методами
+*/
+
+class Car {
+  constructor({maxSpeed = 0, price = 40000}) {
+    this.speed = 0, 
+    this.maxSpeed = maxSpeed, 
+    this.running = false, 
+    this.distance = 0, 
+    this._price = price
+  }
+
+  get price () {
+    return this._price;
+  }
+
+  set price (value) {
+    this._price = value;
+  }
+
+  turnOn() {
+    this.running = true;
+  }
+
+  turnOff() {
+    this.running = false;
+  }
+
+  accelerate(spd) {
+    if (spd <= this.maxSpeed) {
+      this.speed = spd;
+    }
+  }
+
+  decelerate(spd) {
+    if (spd >= 0 && spd <= this.maxSpeed) {
+      this.speed = spd;
+    }
+  }
+
+  drive(hours) {
+    if (this.running === true) {
+      this.distance = this.speed * hours;
+    }
+  }
+
+  static getSpecs(Car) {
+    console.log(Car);
+  }
 }
-const account = new Account('Mangozedog', 'mango@dog.woof');
-const acc = new Account('zis iz', 'mango@dog.woof');
-console.log(Account.prototype.getInfo); // function
-account.getInfo(); // Login: Mangozedog, Email: mango@dog.woof
-acc.sumAmount(7);
 
-let DB = [
-    {name: 'Xiaomi', amount: 46, price: 320}, 
-    {name: 'Sony', amount: 12, price: 500}, 
-    {name: 'Samsung', amount: 43, price: 700}, 
-    {name: 'Nokia', amount: 109, price: 200}, 
-    {name: 'iPhone', amount: 31, price: 950}
-];
+const car = new Car({ maxSpeed: 455, price: 500000});
+console.log(car);
 
-function Shop (name, price, distance, isDrive = true) {
-    this.name = name, 
-    this.price = price, 
-    this.distance = distance, 
-    this.isDrive = isDrive
-}
+car.turnOn();
+console.log(car.running);
 
-const rozetka = new Shop('BMW', 8000, 35000);
+car.accelerate(387);
+console.log(`${car.speed} km`);
 
-Shop.prototype.addDistance = function (dist) {
-    this.distance += dist
-}
+car.decelerate(135);
+console.log(`${car.speed} km`);
 
-Shop.prototype.isCanDrive = function (max) {
-    (this.distance > max) ? this.isDrive = false : this.isDrive = true;
-}
+car.drive(34);
+console.log(`${car.distance} km`);
 
-rozetka.addDistance(2000);
-console.log(rozetka.distance);
+car.turnOff();
+console.log(car.running);
 
-rozetka.isCanDrive(38000);
-console.log(rozetka.isDrive);
 
-rozetka.isCanDrive(3000);
-console.log(rozetka.isDrive);
+
+
+/*
+* Добавь к классу Car из предыдущего задания статический
+* метод getSpecs, который принимает объект-машину как параметр
+* и выводит в консоль значения полей maxSpeed, speed, running и distance.
+*/
+car.turnOn();
+car.accelerate(50);
+car.drive(2);
+
+Car.getSpecs(car); // maxSpeed: 100, speed: 50, running: true, distance: 100
+
+
+
+
+/*
+* Добавь классу Car свойство цены автомобиля, назови его сам.
+* Добавь геттер и сеттер value, который будет работать с свойством цены автомобиля.
+*/
+
+console.log(car.price); // 2000
+
+car.price = 4000;
+console.log(car.price); // 4000
