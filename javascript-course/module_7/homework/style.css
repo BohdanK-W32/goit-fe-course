@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.post {
+  width: 400px;
+  border-radius: 4px;
+  color: #212121;
+  margin: 40px auto;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
+}
+
+.post__image {
+  margin-bottom: 8px;
+  height: 550px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.post__body {
+  padding: 8px;
+}
+
+.post__title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.post__description {
+  margin: 0;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
