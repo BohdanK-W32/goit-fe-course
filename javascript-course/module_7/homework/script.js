@@ -1,3 +1,5 @@
+'use strict';
+
 /*
   1. Модифицируйте готовую функцию createPostCard() из задания 
     номер 6 (https://codepen.io/goit-fe-adv/pen/MVPaeZ) так, 
