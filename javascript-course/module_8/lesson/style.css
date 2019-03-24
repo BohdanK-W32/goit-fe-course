@@ -1,0 +1,145 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 24px;
+  font-family: monospace;
+}
+
+/* Add. task 1 */
+
+
+.button {
+  position: relative;
+  display: block;
+  border: none;
+  min-width: 88px;
+  min-height: 36px;
+  border-radius: 3px;
+  padding: 8px 64px;
+  margin-bottom: 40px;
+
+  font-size: 64px;
+  color: #222;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  font-family: monospace;
+  font-weight: 500;
+  text-decoration: none;
+
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, box-shadow 0.3s, opacity 0.3s, color 0.3s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.button:active {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Add. task 2 */
+
+
+input,
+button {
+  font-size: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.expression {
+  display: flex;
+  align-items: center;
+  font-family: monospace;
+}
+
+.add-button {
+  padding: 4px 32px;
+  cursor: pointer;
+}
+
+.input {
+  width: 100px;
+  font-family: monospace;
+}
+
+span {
+  margin: 0 8px;
+  font-weight: 500;
+  font-family: monospace;
+}
+
+.result {
+  font-size: 64px;
+  font-weight: 400;
+}
+
+/* Add. task 3 */
+
+.row {
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.btn {
+  font-size: 32px;
+  padding: 4px 16px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.value {
+  margin: 0 16px;
+  font-size: 64px;
+}
+
+/* Add. task 4 */
+
+.question-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.options input {
+  margin: 0;
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+.btn-submit {
+  font-size: 24px;
+  padding: 4px 32px;
+  cursor: pointer;
+}
+
+.res {
+  font-size: 24px;
+}
