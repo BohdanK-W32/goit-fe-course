@@ -87,3 +87,79 @@ const radioHandler = evt => {
 }
 
 form.addEventListener('submit', radioHandler);
+
+
+// ==================================================================================================
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const js_btn = document.querySelector('.js-btn');
+  const js_form = document.querySelector('.js-form');
+  const js_input = document.querySelector('.js-input');
+  const js_list = document.querySelector('.js-list');
+  const js_btn_submit = document.querySelector('.js-btn-submit');
+
+  js_form.addEventListener('submit', onSubmit);
+  function onSubmit (evt) {
+    evt.preventDefault();
+    console.log(js_input.value);
+    createLi();
+    js_form.reset();
+  }
+  
+  /* 
+    *CreateLi()
+    *create 'li' and append to 'ul' 
+  */
+  function createLi () {
+
+    const createItem = document.createElement('li');
+    createItem.textContent = js_input.value;
+
+    const btnDelete = document.createElement('button');
+    btnDelete.classList.add('js-delete_btn');
+    btnDelete.textContent = 'X';
+
+    js_list.addEventListener('click', event => {
+      if (event.target.nodeName === 'BUTTON') {
+        event.target.parentNode.remove(createItem);
+      }
+    });
+
+    createItem.append(btnDelete);
+    js_list.append(createItem);
+  }
+});
+
+
+// ===========================================================================================
+
+
+/*
+  На вкладках HTML и CSS уже готовая верстка модального окна.
+  По умолчанию модальное окно скрыто классом modal-hidden.
+  
+  Напишите скрипт который реализует следующее поведение:
+ 
+  - При клике на кнопке с надписью "Open Modal", модальное окно с классом modal, 
+    должно появляться. Для этого необходимо убрать класс modal-hidden. 
+    Для выбора модального модального окна используйте класс js-modal-backdrop
+ 
+  - При открытом модальном окне, клик на кнопку с крестиком (data-action="close-modal")
+    или на серый фон с прозрачностью (js-modal-backdrop), модальное окно должно закрываться.
+*/
+
+const btn_modal = document.querySelector('.btn-open');
+const modal = document.querySelector('.modal');
+const btn_close = document.querySelector('.close-btn');
+const backdrop = document.querySelector('.js-modal-backdrop');
+
+function openModal () { modal.classList.remove('modal-hidden') }
+function closeModal () { modal.classList.add('modal-hidden') }
+function keyPress (e) { if(e.keyCode === 27) { closeModal() } }
+
+document.addEventListener('keyup', keyPress )
+backdrop.addEventListener('click', closeModal );
+btn_close.addEventListener('click', closeModal );
+btn_modal.addEventListener('click', openModal );
+

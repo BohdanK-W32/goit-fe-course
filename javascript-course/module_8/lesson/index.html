@@ -30,29 +30,48 @@
   </div>
 
   <form class="question-form">
-      <div class="options">
-        <label>
+    <div class="options">
+      <label>
         <input type="radio" name="option" value="HTML">
         HTML
       </label>
-        <label>
+      <label>
         <input type="radio" name="option" value="CSS">
         CSS
       </label>
-        <label>
+      <label>
         <input type="radio" name="option" value="JavaScript">
         JavaScript
       </label>
-        <label>
+      <label>
         <input type="radio" name="option" value="PHP">
         PHP
       </label>
-      </div>
-      
-      <button class="btn-submit" type="submit">SUBMIT</button>
+    </div>
+
+    <button class="btn-submit" type="submit">SUBMIT</button>
+  </form>
+  <p class="res">Result: </p>
+
+  <form class="js-form" action="">
+    <input class="js-input" type="text" name="" id=""placeholder="Enter text here"/>
+    <button class="js-btn-submit" type="submit">Submit</button>
+  </form>
+  <ul class="js-list"></ul>
+
+  <button class="btn-open" data-action="open-modal">Open Modal</button>
+
+<div class="modal modal-hidden js-modal-backdrop">
+  <div class="modal-content">
+    <div class="close-btn" data-action="close-modal"></div>
+    <h2 class="modal-title">Newsletter</h2>
+    <p class="modal-text">Subscribe to the Bachas mailing list to receive updates on new arrivals, special offers and other discount information.</p>
+    <form class="sub-form" action="#">
+      <input class="sub-form-input" type="text" placeholder="Your Email Here">
+      <button class="sub-form-btn">subscribe</button>
     </form>
-    
-    <p class="res">Result: </p>
+  </div>
+</div>
 
 
   <script src="./script.js"></script>
