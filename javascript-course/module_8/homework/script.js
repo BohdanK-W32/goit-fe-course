@@ -68,10 +68,40 @@ function onImgOut (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.re
   Тогда создание экземпляра будет выглядеть следующим образом.
 */
 
-// new Gallery({
-//   items: galleryItems,
-//   parentNode: document.querySelector('.image-gallery'),
-//   defaultActiveItem: 1
-// });
+class Gallery {
+
+  constructor (items, parentNode, defaultActiveItem) {
+    this.items = items, 
+    this.parentNode = parentNode, 
+    this.defaultActiveItem = defaultActiveItem
+  }
+  
+  onImgClick (e) { if ( e.target.nodeName === 'IMG') {full_img.setAttribute ('src', e.target.getAttribute('data-fullview') )} }
+  
+  onImgOver (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.add('js-current-img')} }
+
+  onImgOut (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.remove('js-current-img')} }
+
+  createGallery () {
+    const div = document.createElement('div');
+    
+    this.items.map(el => {
+      const li = document.createElement('li');
+      const img = document.createElement('img');
+
+      img.setAttribute( 'src', el.preview );
+      img.setAttribute( 'data-fullview', el.fullview );
+      img.setAttribute( 'alt', el.alt );
+      
+    } );
+  }
+
+}
+
+new Gallery({
+  items: galleryItems,
+  parentNode: document.querySelector('.image-gallery-es6'),
+  defaultActiveItem: 1
+});
 
 /* Далее плагин работает в автономном режиме */
