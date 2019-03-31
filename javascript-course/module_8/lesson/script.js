@@ -163,3 +163,87 @@ backdrop.addEventListener('click', closeModal );
 btn_close.addEventListener('click', closeModal );
 btn_modal.addEventListener('click', openModal );
 
+document.addEventListener('DOMContentLoaded', () => {
+  const formGenerateTable = document.querySelector('.table-form');
+  const tableColor = document.querySelector('.input__color');
+  const trInput = document.querySelector('.trInput');
+  const tdInput = document.querySelector('.tdInput');
+  const table = document.querySelector('table');
+  const removeTable = document.querySelector('.removeTableBtn');
+  let countTd, countTr;
+
+  formGenerateTable.addEventListener('submit', onSubmit);
+
+  table.addEventListener('mouseover', onMouseOver);
+  table.addEventListener('dblclick', onDoubleCLick);
+  removeTable.addEventListener('click', onBtnClick);
+
+  function onBtnClick () {table.remove()}
+
+  function onDoubleCLick (e) {
+    if (e.target.nodeName === 'TD') {e.target.remove()}
+  }
+
+  function onMouseOver (e) {
+    if (e.target.nodeName === 'TD') {
+      e.target.style.backgroundColor = tableColor.value;
+    }
+  }
+
+  function onSubmit (e) {
+    e.preventDefault();
+
+    if ( !isNaN(trInput.value) && !isNaN(tdInput.value) ) {
+      countTr = trInput.value;
+      countTd = tdInput.value;
+
+      generateTable(countTd, countTr);
+      formGenerateTable.reset();
+    }
+  }
+
+  function generateTable (countTd, countTr) {
+    const tbody = document.createElement('tbody');
+    
+    for (let i = 0; i < countTr; i++) {
+      const tr = document.createElement('tr');
+      
+      for (let k = 0; k < countTd; k++) {
+        const td = document.createElement('td');
+        tr.append(td);
+      }
+      tbody.append(tr);
+    }
+
+    table.append(tbody);
+  }
+});
+
+/*
+  Дан набор инпутов. Сделайте так, чтобы при потере фокуса все 
+  инпуты проверяли свое содержимое на правильное количество символов. 
+  
+  - Сколько символов должно быть в инпуте, указывается в атрибуте data-length. 
+  - Если введено подходящее количество, то outline инпута становится зеленым, 
+    если неправильное - красным. Для добавления стилей, на вкладке CSS есть стили valid и invalid
+*/
+
+const inputList = document.querySelector('.input-list');
+
+inputList.addEventListener('focusout', (e) => {
+  if ( e.target.nodeName === 'INPUT' ) { 
+    if (e.target.value.length == e.target.dataset.length) {
+      e.target.classList.remove('invalid'); 
+      e.target.classList.add('valid');
+    } else {
+      e.target.classList.remove('valid'); 
+      e.target.classList.add('invalid');
+    }
+  }
+});
+
+function checkValid () {
+  if (e.target.value.length === e.target.dataset.length) {
+    console.log(e.target.value);
+  }
+}

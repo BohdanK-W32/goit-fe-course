@@ -10,6 +10,18 @@
 </head>
 
 <body>
+  <header>
+    <label> Enter color <input class="input__color" type="color" value="#ff0000" /> </label>
+    <form class="table-form">
+      <label> tr count <input class="trInput" type="text" /> </label>
+      <label> td count <input class="tdInput" type="text" /> </label>
+      <button type="submit">Generate table</button>
+    </form>
+      <button class="removeTableBtn">Remove table</button>
+  </header>
+
+  <table></table>
+
   <button class="button">0</button>
 
   <div class="container">
@@ -61,18 +73,24 @@
 
   <button class="btn-open" data-action="open-modal">Open Modal</button>
 
-<div class="modal modal-hidden js-modal-backdrop">
-  <div class="modal-content">
-    <div class="close-btn" data-action="close-modal"></div>
-    <h2 class="modal-title">Newsletter</h2>
-    <p class="modal-text">Subscribe to the Bachas mailing list to receive updates on new arrivals, special offers and other discount information.</p>
-    <form class="sub-form" action="#">
-      <input class="sub-form-input" type="text" placeholder="Your Email Here">
-      <button class="sub-form-btn">subscribe</button>
-    </form>
+  <div class="modal modal-hidden js-modal-backdrop">
+    <div class="modal-content">
+      <div class="close-btn" data-action="close-modal"></div>
+      <h2 class="modal-title">Newsletter</h2>
+      <p class="modal-text">Subscribe to the Bachas mailing list to receive updates on new arrivals, special offers and other discount information.</p>
+      <form class="sub-form" action="#">
+        <input class="sub-form-input" type="text" placeholder="Your Email Here">
+        <button class="sub-form-btn">subscribe</button>
+      </form>
+    </div>
   </div>
-</div>
 
+  <div class="input-list">
+      <input type="text" class="input-el" data-length="2" placeholder="2 символа">
+      <input type="text" class="input-el" data-length="4" placeholder="4 символа">
+      <input type="text" class="input-el" data-length="8" placeholder="8 символов">
+      <input type="text" class="input-el" data-length="16" placeholder="16 символов">
+    </div>
 
   <script src="./script.js"></script>
 </body>
