@@ -11,47 +11,52 @@ const galleryItems = [
   { preview: 'img/preview-8.jpg', fullview: 'img/fullview-8.jpg', alt: "sunset lights" }
 ];
 
-const preview = document.querySelector('.preview');
-const img_gallery = document.querySelector('.js-image-gallery');
 
-preview.addEventListener('click', onImgClick);
-preview.addEventListener('mouseover', onImgOver);
-preview.addEventListener('mouseout', onImgOut);
-createGallery();
+function GalleryFunction () {
+  const preview = document.querySelector('.preview');
+  const img_gallery = document.querySelector('.js-image-gallery');
 
-const previewFirstLi = preview.firstElementChild;
-const full_img = document.querySelector('.js-fullview-img');
+  preview.addEventListener('click', onImgClick);
+  preview.addEventListener('mouseover', onImgOver);
+  preview.addEventListener('mouseout', onImgOut);
+  createGallery();
 
-full_img.setAttribute ( 'src', previewFirstLi.firstElementChild.getAttribute('data-fullview') );
+  const previewFirstLi = preview.firstElementChild;
+  const full_img = document.querySelector('.js-fullview-img');
 
-function createGallery () { 
-  const div = document.createElement('div');
-  const img = document.createElement('img');
-  
-  div.classList.add('fullview');
-  div.classList.add('js-fullview');
-  img.classList.add('js-fullview-img');
-  
-  galleryItems.map(el => {
-    const li = document.createElement('li');
+  full_img.setAttribute ( 'src', previewFirstLi.firstElementChild.getAttribute('data-fullview') );
+
+  function createGallery () { 
+    const div = document.createElement('div');
     const img = document.createElement('img');
     
-    img.setAttribute( 'src', el.preview );
-    img.setAttribute( 'data-fullview', el.fullview );
-    img.setAttribute( 'alt', el.alt );
+    div.classList.add('fullview');
+    div.classList.add('js-fullview');
+    img.classList.add('js-fullview-img');
     
-    img_gallery.append(div);
-    li.append(img);
-    preview.append(li);
-  }); 
-  
-  div.append(img);
-  img_gallery.prepend(div);
+    galleryItems.map(el => {
+      const li = document.createElement('li');
+      const img = document.createElement('img');
+      
+      img.setAttribute( 'src', el.preview );
+      img.setAttribute( 'data-fullview', el.fullview );
+      img.setAttribute( 'alt', el.alt );
+      
+      img_gallery.append(div);
+      li.append(img);
+      preview.append(li);
+    }); 
+    
+    div.append(img);
+    img_gallery.prepend(div);
+  }
+
+  function onImgClick (e) { if ( e.target.nodeName === 'IMG') {this.fullviewImg.setAttribute ('src', e.target.getAttribute('data-fullview') )} }
+  function onImgOver (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.add('js-current-img')} }
+  function onImgOut (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.remove('js-current-img')} }
 }
 
-function onImgClick (e) { if ( e.target.nodeName === 'IMG') {full_img.setAttribute ('src', e.target.getAttribute('data-fullview') )} }
-function onImgOver (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.add('js-current-img')} }
-function onImgOut (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.remove('js-current-img')} }
+GalleryFunction()
 
 /*
   ⚠️ ЗАДАНИЕ ПОВЫШЕННОЙ СЛОЖНОСТИ - ВЫПОЛНЯТЬ ПО ЖЕЛАНИЮ
@@ -70,38 +75,64 @@ function onImgOut (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.re
 
 class Gallery {
 
-  constructor (items, parentNode, defaultActiveItem) {
-    this.items = items, 
-    this.parentNode = parentNode, 
-    this.defaultActiveItem = defaultActiveItem
+  constructor ({items, parentNode, defaultActiveItem}) {
+    this._items = items, 
+    this._parentNode = parentNode, 
+    this._defaultActiveItem = defaultActiveItem, 
+    this._preview = document.querySelector('.preview-es6')
   }
-  
-  onImgClick (e) { if ( e.target.nodeName === 'IMG') {full_img.setAttribute ('src', e.target.getAttribute('data-fullview') )} }
-  
-  onImgOver (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.add('js-current-img')} }
 
-  onImgOut (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.remove('js-current-img')} }
+  get items () {return this._items}
+  get parentNode () {return this._parentNode}
+  get defaultActiveItem () {return this._defaultActiveItem}
+  get preview () {return this._preview}
 
-  createGallery () {
+  
+  createGallery() {
+    
+    const img = document.createElement('img');
     const div = document.createElement('div');
     
-    this.items.map(el => {
-      const li = document.createElement('li');
+    div.classList.add('fullview-es6');
+    div.classList.add('js-fullview-es6');
+    img.classList.add('js-fullview-img-es6'); 
+
+    
+    div.append(img);
+    this.parentNode.prepend(div);
+
+    
+    this.items.map( el => {
       const img = document.createElement('img');
-
-      img.setAttribute( 'src', el.preview );
-      img.setAttribute( 'data-fullview', el.fullview );
-      img.setAttribute( 'alt', el.alt );
+      img.setAttribute('src', el.preview);
+      img.setAttribute('data-fullview', el.fullview);
+      img.setAttribute('alt', el.alt);
       
-    } );
-  }
+      const li = document.createElement('li');
+      li.append(img);
+      this.preview.append(li);
+    });
 
+    const fullviewImg = document.querySelector('.js-fullview-img-es6');
+    fullviewImg.setAttribute('src', this.items[this.defaultActiveItem].fullview);
+    
+    this.preview.addEventListener('click', onImgClick);
+    this.preview.addEventListener('mouseover', onImgOver);
+    this.preview.addEventListener('mouseout', onImgOut);
+    
+    function onImgClick (e) { if ( e.target.nodeName === 'IMG') {fullviewImg.setAttribute ('src', e.target.getAttribute('data-fullview') )} }
+    function onImgOver (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.toggle('js-current-img')} }
+    function onImgOut (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.toggle('js-current-img')} }
+  }
+  
 }
 
-new Gallery({
+const galleryPlugin = new Gallery({
   items: galleryItems,
   parentNode: document.querySelector('.image-gallery-es6'),
-  defaultActiveItem: 1
+  defaultActiveItem: 4
 });
+
+galleryPlugin.createGallery();
 
 /* Далее плагин работает в автономном режиме */
