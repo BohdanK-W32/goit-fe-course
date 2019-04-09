@@ -51,7 +51,7 @@ function GalleryFunction () {
     img_gallery.prepend(div);
   }
 
-  function onImgClick (e) { if ( e.target.nodeName === 'IMG') {this.fullviewImg.setAttribute ('src', e.target.getAttribute('data-fullview') )} }
+  function onImgClick (e) { if ( e.target.nodeName === 'IMG') {full_img.setAttribute('src', e.target.getAttribute('data-fullview'))} }
   function onImgOver (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.add('js-current-img')} }
   function onImgOut (e) { if ( e.target.nodeName === 'IMG') {e.target.classList.remove('js-current-img')} }
 }
