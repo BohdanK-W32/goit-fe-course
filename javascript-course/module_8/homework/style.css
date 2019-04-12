@@ -25,7 +25,6 @@ img {
   filter: grayscale(1);
 }
 
-.image-gallery, 
 .image-gallery-es6 {
   display: flex;
   flex-direction: column;
@@ -33,33 +32,80 @@ img {
   width: 100%;
   height: 97vh;
   margin: 0 auto;
-  overflow-x: hidden;
   border-radius: 10px;
   box-shadow: 0px 0px 24px -10px rgba(0,0,0,0.86);
 }
 
-.preview, 
 .preview-es6 {
   display: flex;
   list-style: none;
-  padding: 0 8px;
-  overflow-x: scroll;
+  padding: 0 6px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-.fullview, 
 .fullview-es6 {
   display: flex;
   border-radius: 10px;
 }
 
-.js-fullview-img, 
 .js-fullview-img-es6 {
   max-width: 100%;
   max-height: 100%;
+  margin: auto;
   filter: grayscale(0);
 }
 
-.js-current-img, 
-.js-current-img-es6 {
+.js-current-img {
   filter: grayscale(0);
+}
+
+img:hover{
+  filter: grayscale(0);
+}
+
+.js-scroll-left, 
+.js-scroll-right {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(139, 0, 139, 0.6);
+  z-index: 10;
+}
+
+.js-scroll-left {
+  left: 3%;
+}
+
+.js-scroll-right {
+  right: 3%;
+} 
+
+.js-scroll-left::before, 
+.js-scroll-right::before {
+  position: absolute;
+  font-family: monospace;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: black; 
+}
+
+.js-scroll-left::before{
+  left: 22%;
+  content: "<";
+}
+
+.js-scroll-right::before{
+  right: 22%;
+  content: ">";
+}
+
+@media (min-width: 1024px) {
+  .js-scroll-left, 
+  .js-scroll-right {
+    display: block;
+  }
 }
