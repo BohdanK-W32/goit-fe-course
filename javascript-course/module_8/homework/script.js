@@ -41,6 +41,9 @@ class Gallery {
     img.classList.add('js-fullview-img-es6'); 
     aLeft.classList.add('js-scroll-left');
     aRight.classList.add('js-scroll-right');
+
+    aLeft.textContent = '<';
+    aRight.textContent = '>';
     
     div.append(img);
     this.parentNode.prepend(div);
@@ -69,9 +72,21 @@ class Gallery {
     
     function onImgClick (e) { if ( e.target.nodeName === 'IMG') {fullviewImg.setAttribute ('src', e.target.getAttribute('data-fullview') )} }
     function onScroll (e) {
-      e.target.classList.contains('js-scroll-left')
-      ? this.preview.scrollLeft -= 300
-      : this.preview.scrollLeft += 300;
+      const current = fullviewImg.getAttribute('src');
+      const currentPreviewImg = document.querySelector(`img[data-fullview='${current}']`);
+      const fullviewImgData = currentPreviewImg.getAttribute('data-fullview');
+      const from = fullviewImgData.search('-') + 1;
+      const to = fullviewImgData.length - 4;
+      let data = +fullviewImgData.substring(from, to);
+
+      if ( e.target.classList.contains('js-scroll-left') && data > 1) {
+        data--
+        console.log(+data);
+        fullviewImg.setAttribute('src', `img/fullview-${data}.jpg`);
+      } else if ( e.target.classList.contains('js-scroll-right') && +data < this.items.length ) {
+        data++;
+        fullviewImg.setAttribute('src', `img/fullview-${data}.jpg`);
+      }
     }
   }
 }

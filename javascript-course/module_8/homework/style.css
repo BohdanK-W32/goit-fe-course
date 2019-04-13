@@ -40,8 +40,15 @@ img {
   display: flex;
   list-style: none;
   padding: 0 6px;
-  overflow-x: hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
   scroll-behavior: smooth;
+}
+
+.preview-es6::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
 }
 
 .fullview-es6 {
@@ -56,10 +63,6 @@ img {
   filter: grayscale(0);
 }
 
-.js-current-img {
-  filter: grayscale(0);
-}
-
 img:hover{
   filter: grayscale(0);
 }
@@ -68,44 +71,32 @@ img:hover{
 .js-scroll-right {
   display: none;
   position: fixed;
-  bottom: 5%;
-  width: 60px;
-  height: 60px;
+  bottom: 50%;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  background-color: rgba(139, 0, 139, 0.6);
+  font-family: serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: black; 
   z-index: 10;
+  background: rgba(203,96,179,0.4);
+  user-select: none;
 }
 
 .js-scroll-left {
-  left: 3%;
+  left: 6%;
 }
 
 .js-scroll-right {
-  right: 3%;
+  right: 6%;
 } 
-
-.js-scroll-left::before, 
-.js-scroll-right::before {
-  position: absolute;
-  font-family: monospace;
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: black; 
-}
-
-.js-scroll-left::before{
-  left: 22%;
-  content: "<";
-}
-
-.js-scroll-right::before{
-  right: 22%;
-  content: ">";
-}
 
 @media (min-width: 1024px) {
   .js-scroll-left, 
   .js-scroll-right {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
