@@ -1,0 +1,16 @@
+{
+  "students": [
+    {
+      "first_name": " Slim",
+      "last_name": "Shady",
+      "homeworks": 7,
+      "id": 1
+    },
+    {
+      "first_name": "Tupac",
+      "last_name": "Shakur",
+      "homeworks": 5,
+      "id": 2
+    }
+  ]
+}
