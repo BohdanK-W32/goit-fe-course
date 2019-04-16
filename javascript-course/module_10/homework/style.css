@@ -12,17 +12,19 @@ body{
 
 .btn-wrapper{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 button{
-  width: 130px;
-  height: 60px;
+  width: 160px;
+  height: 80px;
   border: none;
-  border-radius: 12px;
+  border-radius: 20px;
   background-color: #aaaaaa;
   font-family: sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   margin: 10px;
   word-wrap: normal;
   outline: none;

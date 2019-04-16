@@ -116,6 +116,7 @@ class RESTdatabase {
   removeUser () {
     const id = prompt('Enter user ID');
     fetch( `${this.database}${id}`, {method: 'DELETE'} )
+    .then( response => response.json() )
     .then(data => {
       if ( data.status === 200 && id !== '' ) {
         console.log(data);
