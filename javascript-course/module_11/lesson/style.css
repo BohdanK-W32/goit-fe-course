@@ -1,0 +1,39 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+.posts{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post{
+  display: flex;
+  flex-direction: column;
+}
+
+.image{
+  width: 400px;
+  height: 300px;
+  object-fit: fill;
+}
+
+.quote{
+  font-family: serif;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.whom{
+  font-size: 20px;
+  font-style: oblique;
+  font-weight: 700;
+  text-align: right;
+}

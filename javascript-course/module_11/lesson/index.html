@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Module 11. Lesson</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <section class="posts">
+    <template id="post-template">
+      {{#each data}}
+        <article class="post">
+          <img src="{{imgSrc}}" alt="{{whom}}" class="image">
+          <q class="quote">{{quote}}</q>
+          <p class="whom">{{whom}}</p>
+        </article>
+      {{/each}}
+    </template>
+  </section>
+
+  <form type="submit">
+    <input type="text" name="name" placeholder="enter name" />
+    <input type="email" name="email" placeholder="enter email" />
+    <input type="password" name="pass" placeholder="enter pass" />
+    <button type="submit">Log in</button>
+  </form>
+
+  <table>
+    <thead>
+      <td>name</td>
+      <td>email</td>
+      <td>pass</td>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/hmac-md5.js" integrity="sha256-0wcgFOtBhtAuM1xRGzzG4WOlz+uqjErhNjSvJIhweOY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
